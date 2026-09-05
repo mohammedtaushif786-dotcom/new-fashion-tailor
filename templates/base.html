@@ -69,6 +69,12 @@
         <div class="loading-text">NEW FASHION TAILOR</div>
         <div class="loading-sub">Loading your experience...</div>
     </div>
+    <script>
+        setTimeout(function() {
+            var ls = document.getElementById('loadingScreen');
+            if (ls) { ls.style.display = 'none'; }
+        }, 4000);
+    </script>
     <nav class="navbar">
         <div class="nav-container">
             <a href="{{ url_for('home') }}" class="logo">
@@ -213,15 +219,11 @@
     <script>
         function hideLoader() {
             var ls = document.getElementById('loadingScreen');
-            if (ls && !ls.classList.contains('hidden')) {
-                ls.classList.add('hidden');
-                setTimeout(function() { ls.remove(); }, 500);
-            }
+            if (ls) { ls.style.display = 'none'; }
         }
-        window.addEventListener('load', function() { setTimeout(hideLoader, 500); });
-        document.addEventListener('DOMContentLoaded', function() { setTimeout(hideLoader, 3000); });
-        setTimeout(hideLoader, 4000);
-        window.addEventListener('error', hideLoader);
+        window.addEventListener('load', function() { setTimeout(hideLoader, 300); });
+        document.addEventListener('DOMContentLoaded', function() { setTimeout(hideLoader, 2000); });
+        setTimeout(hideLoader, 3000);
     </script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
