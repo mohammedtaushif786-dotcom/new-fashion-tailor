@@ -1,7 +1,7 @@
 """
 NEW FASHION TAILOR - Professional Tailoring Website
 Built with Python Flask Framework
-Features: Nepali Language, Google Reviews, Online Payment, Blog, Gallery
+Features: Nepali Language, Google Reviews, Online Payment, Blog, Gallery, Email Notifications
 Security: CSRF Protection, Rate Limiting, Security Headers
 """
 from flask import Flask, render_template, request, jsonify, flash, redirect, url_for
@@ -9,6 +9,7 @@ from flask_wtf.csrf import CSRFProtect
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
 from flask_talisman import Talisman
+from flask_mail import Mail, Message
 from datetime import datetime
 import os
 import secrets
@@ -19,6 +20,15 @@ app.config['SESSION_COOKIE_SECURE'] = True
 app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 
+# Email Configuration (Gmail SMTP)
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = 'tamannakha84@gmail.com'
+app.config['MAIL_PASSWORD'] = os.environ.get('GMAIL_APP_PASSWORD', '')
+app.config['MAIL_DEFAULT_SENDER'] = 'tamannakha84@gmail.com'
+
+mail = Mail(app)
 csrf = CSRFProtect(app)
 limiter = Limiter(app=app, key_func=get_remote_address)
 talisman = Talisman(
@@ -32,6 +42,18 @@ talisman = Talisman(
     },
     force_https=False
 )
+
+def send_notification_email(subject, body):
+    """Send email notification to shop owner"""
+    try:
+        if app.config['MAIL_PASSWORD']:
+            msg = Message(subject, recipients=['tamannakha84@gmail.com'])
+            msg.body = body
+            mail.send(msg)
+            return True
+    except Exception as e:
+        print(f"Email error: {e}")
+    return False
 
 BLOG_POSTS = [
     {
@@ -197,6 +219,26 @@ def contact():
             flash('Please fill all required fields.', 'error')
             return redirect(url_for('contact'))
 
+        # Send email notification
+        subject = f"New Contact Message from {name} - NEW FASHION TAILOR"
+        body = f"""
+NEW MESSAGE FROM WEBSITE CONTACT FORM
+=====================================
+
+Name: {name}
+Phone: {phone}
+Email: {email if email else 'Not provided'}
+Service Interest: {service if service else 'Not specified'}
+
+Message:
+{message}
+
+---
+Received at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+Website: https://new-fashion-tailor.onrender.com
+"""
+        send_notification_email(subject, body)
+
         flash('Thank you! Your message has been sent successfully. We will contact you soon!', 'success')
         return redirect(url_for('contact'))
 
@@ -208,6 +250,7 @@ def booking():
     if request.method == 'POST':
         name = request.form.get('name', '').strip()
         phone = request.form.get('phone', '').strip()
+        email = request.form.get('email', '').strip()
         service = request.form.get('service', '').strip()
         date = request.form.get('date', '').strip()
         time = request.form.get('time', '').strip()
@@ -216,6 +259,26 @@ def booking():
         if not name or not phone or not service or not date:
             flash('Please fill all required fields.', 'error')
             return redirect(url_for('booking'))
+
+        # Send email notification
+        subject = f"New Appointment Booking from {name} - NEW FASHION TAILOR"
+        body = f"""
+NEW APPOINTMENT BOOKING
+=======================
+
+Name: {name}
+Phone: {phone}
+Email: {email if email else 'Not provided'}
+Service: {service}
+Date: {date}
+Time: {time}
+Notes: {notes if notes else 'No additional notes'}
+
+---
+Received at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+Website: https://new-fashion-tailor.onrender.com
+"""
+        send_notification_email(subject, body)
 
         flash(f'Thank you {name}! Your appointment is booked for {date} at {time}. We will call you to confirm.', 'success')
         return redirect(url_for('booking'))
