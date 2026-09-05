@@ -291,11 +291,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     revealElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         revealObserver.observe(el);
     });
+    
+    // Fallback: show all elements after 2 seconds in case observer fails
+    setTimeout(function() {
+        revealElements.forEach(el => {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        });
+    }, 2000);
     
     // Active Navigation Link
     const sections = document.querySelectorAll('section[id]');

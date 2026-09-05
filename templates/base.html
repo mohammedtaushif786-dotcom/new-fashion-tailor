@@ -55,6 +55,8 @@
     <style>
         .loading-screen{position:fixed;inset:0;background:linear-gradient(135deg,#F3E8FF,#FFF1F2);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:99999;transition:opacity 0.5s ease}
         .loading-screen.hidden{opacity:0;pointer-events:none}
+        body{opacity:1 !important}
+        main{opacity:1 !important}
         .loading-spinner{width:60px;height:60px;border:4px solid #E2E8F0;border-top:4px solid #8B5CF6;border-radius:50%;animation:spin 1s linear infinite;margin-bottom:24px}
         .loading-text{font-family:'Playfair Display',serif;font-size:1.5rem;color:#0F172A;margin-bottom:8px}
         .loading-sub{color:#94A3B8;font-size:0.9rem}
@@ -209,20 +211,17 @@
     </a>
 
     <script>
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                var ls = document.getElementById('loadingScreen');
-                if (ls) { ls.classList.add('hidden'); setTimeout(function() { ls.remove(); }, 500); }
-            }, 800);
-        });
-        window.addEventListener('error', function(e) {
+        function hideLoader() {
             var ls = document.getElementById('loadingScreen');
-            if (ls) { ls.classList.add('hidden'); setTimeout(function() { ls.remove(); }, 500); }
-        });
-        setTimeout(function() {
-            var ls = document.getElementById('loadingScreen');
-            if (ls) { ls.classList.add('hidden'); setTimeout(function() { ls.remove(); }, 500); }
-        }, 5000);
+            if (ls && !ls.classList.contains('hidden')) {
+                ls.classList.add('hidden');
+                setTimeout(function() { ls.remove(); }, 500);
+            }
+        }
+        window.addEventListener('load', function() { setTimeout(hideLoader, 500); });
+        document.addEventListener('DOMContentLoaded', function() { setTimeout(hideLoader, 3000); });
+        setTimeout(hideLoader, 4000);
+        window.addEventListener('error', hideLoader);
     </script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
