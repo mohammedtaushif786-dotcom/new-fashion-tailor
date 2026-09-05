@@ -298,6 +298,18 @@ User-agent: Bingbot
 Allow: /
 """, 200, {'Content-Type': 'text/plain'}
 
+@app.route('/security.txt')
+def security_txt():
+    return """Contact: mailto:tamannakha84@gmail.com
+Preferred-Languages: en, ne
+""", 200, {'Content-Type': 'text/plain'}
+
+@app.route('/.well-known/security.txt')
+def well_known_security():
+    return """Contact: mailto:tamannakha84@gmail.com
+Preferred-Languages: en, ne
+""", 200, {'Content-Type': 'text/plain'}
+
 @app.route('/sitemap.xml')
 def sitemap_xml():
     pages = ['/', '/about', '/services', '/blog', '/gallery', '/reviews', '/payment', '/booking', '/contact']
