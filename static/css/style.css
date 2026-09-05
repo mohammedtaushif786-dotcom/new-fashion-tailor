@@ -920,6 +920,26 @@ body {
 .service-detail-content p {
     color: var(--text);
     margin-bottom: 16px;
+    line-height: 1.8;
+}
+
+.service-features-list {
+    margin: 24px 0;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.feature-item i {
+    color: #10B981;
+    font-size: 1.1rem;
+    flex-shrink: 0;
 }
 
 .service-detail-list {
