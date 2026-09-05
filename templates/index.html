@@ -1,0 +1,269 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+        <div class="hero-badge" data-en="✨ Premium Tailoring Since Years" data-ne="✨ वर्षौंदेखि प्रिमियम टाइलरिङ">✨ Premium Tailoring Since Years</div>
+        <h1 class="hero-title">
+            <span class="gradient-text" data-en="NEW FASHION" data-ne="नयाँ फ्यासन">NEW FASHION</span>
+            <span class="hero-title-sub" data-en="TAILOR" data-ne="टाइलर">TAILOR</span>
+        </h1>
+        <p class="hero-subtitle" data-en="Where Every Stitch Tells a Story of Elegance & Precision" data-ne="जहाँ हरेक टाँकले सुन्दरता र शुद्धताको कथा बताउँछ">Where Every Stitch Tells a Story of Elegance & Precision</p>
+        <p class="hero-desc" data-en="From School Uniforms to Wedding Dress Collections, Official Wear to Custom Designs - We Craft Your Vision Into Reality" data-ne="विद्यालय वर्दीदेखि विवाह पोशाक सङ्ग्रह, अधिकारिक पहिरनदेखि कस्टम डिजाइन - हामी तपाईंको दृष्टिकोणलाई वास्तविकतामा बदल्छौं">From School Uniforms to Wedding Dress Collections, Official Wear to Custom Designs - We Craft Your Vision Into Reality</p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('services') }}" class="btn btn-primary">
+                <span data-en="Explore Services" data-ne="सेवाहरू अन्वेषण गर्नुहोस्">Explore Services</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="{{ url_for('booking') }}" class="btn btn-secondary">
+                <span data-en="Book Appointment" data-ne="अपोइन्टमेन्ट बुक गर्नुहोस्">Book Appointment</span>
+            </a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number" data-count="500">0</span>+
+                <span class="stat-label" data-en="Happy Customers" data-ne="खुश ग्राहक">Happy Customers</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-count="10">0</span>+
+                <span class="stat-label" data-en="Years Experience" data-ne="वर्ष अनुभव">Years Experience</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-count="100">0</span>%
+                <span class="stat-label" data-en="Satisfaction" data-ne="सन्तुष्टि">Satisfaction</span>
+            </div>
+        </div>
+    </div>
+    <div class="hero-visual">
+        <div class="hero-card hero-card-1">
+            <div class="card-icon">👔</div>
+            <h3 data-en="Premium Quality" data-ne="प्रिमियम गुणस्तर">Premium Quality</h3>
+            <p data-en="Finest fabrics & craftsmanship" data-ne="उत्कृष्ट कपडा र शिल्पकला">Finest fabrics & craftsmanship</p>
+        </div>
+        <div class="hero-card hero-card-2">
+            <div class="card-icon">✂️</div>
+            <h3 data-en="Custom Fitting" data-ne="कस्टम फिटिङ">Custom Fitting</h3>
+            <p data-en="Tailored to perfection" data-ne="पूर्णताका लागि टेलर गरिएको">Tailored to perfection</p>
+        </div>
+        <div class="hero-card hero-card-3">
+            <div class="card-icon">👗</div>
+            <h3 data-en="Latest Designs" data-ne="नवीनतम डिजाइन">Latest Designs</h3>
+            <p data-en="Trendy & fashionable styles" data-ne="ट्रेन्डी र फेसनेबल शैली">Trendy & fashionable styles</p>
+        </div>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag" data-en="Why Choose Us" data-ne="हामीलाई किन छान्नुभयो">Why Choose Us</span>
+            <h2 data-en="The Art of Perfect Tailoring" data-ne="पूर्ण टाइलरिङको कला">The Art of Perfect Tailoring</h2>
+            <p data-en="We combine traditional craftsmanship with modern techniques to deliver excellence" data-ne="हामी उत्कृष्टता प्रदान गर्न परम्परागत शिल्पकला र आधुनिक प्रविधि सँग जोड्छौं">We combine traditional craftsmanship with modern techniques to deliver excellence</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3 data-en="Quality Assured" data-ne="गुणस्तर आश्वस्त">Quality Assured</h3>
+                <p data-en="We use only premium fabrics and follow strict quality control measures to ensure every stitch is perfect." data-ne="हामी केवल प्रिमियम कपडा प्रयोग गर्छौं र हरेक टाँक पूर्ण हुने सुनिश्चित गर्न कडा गुणस्तर नियन्त्रण उपायहरू पालना गर्छौं।">We use only premium fabrics and follow strict quality control measures to ensure every stitch is perfect.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                <h3 data-en="Timely Delivery" data-ne="समयमै डेलिभरी">Timely Delivery</h3>
+                <p data-en="We respect your time. Our efficient process ensures your orders are delivered on schedule, every time." data-ne="हामी तपाईंको सम्मान गर्छौं। हाम्रो कुशल प्रक्रियाले तपाईंको अर्डरहरू तालिका अनुसार डेलिभरी हुने सुनिश्चित गर्छ।">We respect your time. Our efficient process ensures your orders are delivered on schedule, every time.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-heart"></i></div>
+                <h3 data-en="Customer First" data-ne="ग्राहक पहिला">Customer First</h3>
+                <p data-en="Your satisfaction is our priority. We offer free consultations and adjustments to ensure perfect fit." data-ne="तपाईंको सन्तुष्टि हाम्रो प्राथमिकता हो। हामी पूर्ण फिटिङ सुनिश्चित गर्न निःशुल्क परामर्श र समायोजन प्रदान गर्छौं।">Your satisfaction is our priority. We offer free consultations and adjustments to ensure perfect fit.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                <h3 data-en="Expert Consultation" data-ne="विशेषज्ञ परामर्श">Expert Consultation</h3>
+                <p data-en="Get professional advice on fabric selection, design choices, and styling recommendations." data-ne="कपडा छनोट, डिजाइन छनोट, र स्टाइलिङ सिफारिसहरूमा पेशेवर सल्लाह प्राप्त गर्नुहोस्।">Get professional advice on fabric selection, design choices, and styling recommendations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-wallet"></i></div>
+                <h3 data-en="Affordable Pricing" data-ne="उचित मूल्य">Affordable Pricing</h3>
+                <p data-en="Premium quality doesn't have to cost a fortune. We offer competitive prices for all our services." data-ne="प्रिमियम गुणस्तरको लागि धेरै खर्च हुनु पर्दैन। हामी हाम्रा सबै सेवाहरूको लागि प्रतिस्पर्धी मूल्य प्रदान गर्छौं।">Premium quality doesn't have to cost a fortune. We offer competitive prices for all our services.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-palette"></i></div>
+                <h3 data-en="Custom Designs" data-ne="कस्टम डिजाइन">Custom Designs</h3>
+                <p data-en="Bring your dream designs to life. We specialize in creating unique, personalized garments." data-ne="तपाईंको सपनाको डिजाइनलाई वास्तविकतामा ल्याउनुहोस्। हामी अद्वितीय, व्यक्तिगत पोशाक सिर्जनामा विशेषज्ञ छौं।">Bring your dream designs to life. We specialize in creating unique, personalized garments.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="services-preview">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag" data-en="Our Expertise" data-ne="हाम्रो विशेषज्ञता">Our Expertise</span>
+            <h2 data-en="Services We Offer" data-ne="हामीले प्रदान गर्ने सेवाहरू">Services We Offer</h2>
+            <p data-en="Comprehensive tailoring solutions for every occasion" data-ne="हरेक अवसरको लागि व्यापक टाइलरिङ समाधान">Comprehensive tailoring solutions for every occasion</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-badge" data-en="Popular" data-ne="लोकप्रिय">Popular</div>
+                <div class="service-icon">🎒</div>
+                <h3 data-en="School Uniforms" data-ne="विद्यालय वर्दी">School Uniforms</h3>
+                <p data-en="Durable, comfortable, and perfectly fitted uniforms for all schools." data-ne="सबै विद्यालयका लागि टिकाउ, सहज, र पूर्ण रूपमा फिट हुने वर्दी।">Durable, comfortable, and perfectly fitted uniforms for all schools.</p>
+                <ul class="service-features">
+                    <li>✓ <span data-en="All school patterns available" data-ne="सबै विद्यालय ढाँचा उपलब्ध">All school patterns available</span></li>
+                    <li>✓ <span data-en="Bulk orders welcome" data-ne="बल्क अर्डर स्वागत छ">Bulk orders welcome</span></li>
+                    <li>✓ <span data-en="Quick turnaround" data-ne="छिटो डेलिभरी">Quick turnaround</span></li>
+                </ul>
+                <a href="{{ url_for('services') }}#school" class="service-link" data-en="Learn More →" data-ne="थप जान्नुहोस् →">Learn More →</a>
+            </div>
+            <div class="service-card featured">
+                <div class="service-badge" data-en="Premium" data-ne="प्रिमियम">Premium</div>
+                <div class="service-icon">💍</div>
+                <h3 data-en="Wedding Collection" data-ne="विवाह सङ्ग्रह">Wedding Collection</h3>
+                <p data-en="Exquisite bridal and groom wear for your special day." data-ne="तपाईंको विशेष दिनको लागि उत्कृष्ट दुलही र दुलहा पहिरन।">Exquisite bridal and groom wear for your special day.</p>
+                <ul class="service-features">
+                    <li>✓ <span data-en="Bridal Lehengas & Sarees" data-ne="दुलही लेहंगा र सारी">Bridal Lehengas & Sarees</span></li>
+                    <li>✓ <span data-en="Sherwanis & Suits" data-ne="शेरवानी र सुट">Sherwanis & Suits</span></li>
+                    <li>✓ <span data-en="Custom embroidery" data-ne="कस्टम कढाइ">Custom embroidery</span></li>
+                </ul>
+                <a href="{{ url_for('services') }}#wedding" class="service-link" data-en="Learn More →" data-ne="थप जान्नुहोस् →">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-badge" data-en="Professional" data-ne="पेशेवर">Professional</div>
+                <div class="service-icon">👔</div>
+                <h3 data-en="Official Wear" data-ne="अधिकारिक पहिरन">Official Wear</h3>
+                <p data-en="Professional attire for the modern workplace." data-ne="आधुनिक कार्यस्थलको लागि पेशेवर पहिरन।">Professional attire for the modern workplace.</p>
+                <ul class="service-features">
+                    <li>✓ <span data-en="Business suits" data-ne="व्यापार सुट">Business suits</span></li>
+                    <li>✓ <span data-en="Formal shirts" data-ne="औपचारिक सर्ट">Formal shirts</span></li>
+                    <li>✓ <span data-en="Perfect fit guaranteed" data-ne="पूर्ण फिटिङ ग्यारेन्टी">Perfect fit guaranteed</span></li>
+                </ul>
+                <a href="{{ url_for('services') }}#official" class="service-link" data-en="Learn More →" data-ne="थप जान्नुहोस् →">Learn More →</a>
+            </div>
+        </div>
+        <div class="services-cta">
+            <a href="{{ url_for('services') }}" class="btn btn-primary btn-large" data-en="View All Services" data-ne="सबै सेवाहरू हेर्नुहोस्">View All Services</a>
+        </div>
+    </div>
+</section>
+
+<section class="google-reviews-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag"><i class="fab fa-google"></i> <span data-en="Google Reviews" data-ne="गुगल समीक्षा">Google Reviews</span></span>
+            <h2 data-en="What Our Customers Say" data-ne="हाम्रा ग्राहकहरूले के भन्छन्">What Our Customers Say</h2>
+            <p data-en="Real reviews from our valued customers on Google" data-ne="गुगलमा हाम्रा बहुमूल्य ग्राहकहरूका वास्तविक समीक्षा">Real reviews from our valued customers on Google</p>
+        </div>
+        <div class="reviews-summary">
+            <div class="reviews-score">
+                <span class="score">4.9</span>
+                <div class="stars">★★★★★</div>
+                <span class="review-count" data-en="Based on 50+ reviews" data-ne="50+ समीक्षामा आधारित">Based on 50+ reviews</span>
+            </div>
+        </div>
+        <div class="reviews-grid">
+            {% for review in reviews %}
+            <div class="review-card">
+                <div class="review-header">
+                    <div class="review-avatar">{{ review.avatar }}</div>
+                    <div class="review-info">
+                        <h4>{{ review.name }}</h4>
+                        <span class="review-date">{{ review.date }}</span>
+                    </div>
+                    <div class="review-rating">
+                        {% for i in range(review.rating) %}★{% endfor %}
+                    </div>
+                </div>
+                <p class="review-text">{{ review.text }}</p>
+                <div class="review-source">
+                    <i class="fab fa-google"></i> <span data-en="Posted on Google" data-ne="गुगलमा पोस्ट गरिएको">Posted on Google</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="reviews-cta">
+            <a href="{{ url_for('reviews') }}" class="btn btn-primary" data-en="View All Reviews" data-ne="सबै समीक्षा हेर्नुहोस्">View All Reviews</a>
+            <a href="https://g.page/r/newfashiontailor/review" target="_blank" class="btn btn-secondary" data-en="Leave a Review" data-ne="समीक्षा छोड्नुहोस्">Leave a Review</a>
+        </div>
+    </div>
+</section>
+
+<section class="blog-preview">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag" data-en="Latest from Blog" data-ne="ब्लगबाट नवीनतम">Latest from Blog</span>
+            <h2 data-en="Fashion Tips & Trends" data-ne="फ्यासन सुझाव र प्रचलन">Fashion Tips & Trends</h2>
+        </div>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=250&fit=crop" alt="School Uniforms">
+                    <span class="blog-category" data-en="School" data-ne="विद्यालय">School</span>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar"></i> August 15, 2026</span>
+                        <span><i class="fas fa-clock"></i> 5 min read</span>
+                    </div>
+                    <h3 data-en="Top 10 School Uniform Trends in Nepal 2026" data-ne="नेपाल २०२६ मा शीर्ष १० विद्यालय वर्दी प्रचलन">Top 10 School Uniform Trends in Nepal 2026</h3>
+                    <a href="{{ url_for('blog_post', slug='school-uniform-trends-nepal-2026') }}" data-en="Read More" data-ne="थप पढ्नुहोस्">Read More</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1594552072238-5763e1e4fa7d?w=400&h=250&fit=crop" alt="Wedding Dress">
+                    <span class="blog-category" data-en="Wedding" data-ne="विवाह">Wedding</span>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar"></i> August 10, 2026</span>
+                        <span><i class="fas fa-clock"></i> 7 min read</span>
+                    </div>
+                    <h3 data-en="Wedding Dress Trends: Nepali Bridal Fashion 2026" data-ne="विवाह पोशाक प्रचलन: नेपाली दुलही फ्यासन २०२६">Wedding Dress Trends: Nepali Bridal Fashion 2026</h3>
+                    <a href="{{ url_for('blog_post', slug='wedding-dress-trends-nepali-bridal-2026') }}" data-en="Read More" data-ne="थप पढ्नुहोस्">Read More</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=250&fit=crop" alt="Fabric Guide">
+                    <span class="blog-category" data-en="Tips" data-ne="सुझाव">Tips</span>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar"></i> August 5, 2026</span>
+                        <span><i class="fas fa-clock"></i> 6 min read</span>
+                    </div>
+                    <h3 data-en="How to Choose the Perfect Fabric for Your Outfit" data-ne="तपाईंको पोशाकको लागि पूर्ण कपडा कसरी छान्ने">How to Choose the Perfect Fabric for Your Outfit</h3>
+                    <a href="{{ url_for('blog_post', slug='how-to-choose-perfect-fabric') }}" data-en="Read More" data-ne="थप पढ्नुहोस्">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="blog-cta">
+            <a href="{{ url_for('blog') }}" class="btn btn-primary" data-en="Read All Articles" data-ne="सबै लेखहरू पढ्नुहोस्">Read All Articles</a>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2 data-en="Ready to Get Started?" data-ne="सुरु गर्न तयार हुनुहुन्छ?">Ready to Get Started?</h2>
+            <p data-en="Contact us today for a free consultation and let us help you create the perfect outfit for any occasion." data-ne="आज नै हामीसँग सम्पर्क गर्नुहोस् र हामीलाई कुनै पनि अवसरको लागि पूर्ण पोशाक बनाउन मद्दत गर्न दिनुहोस्।">Contact us today for a free consultation and let us help you create the perfect outfit for any occasion.</p>
+            <div class="cta-buttons">
+                <a href="tel:+9779808699164" class="btn btn-primary">
+                    <i class="fas fa-phone"></i>
+                    <span data-en="Call Now: 9808699164" data-ne="अहिले कल गर्नुहोस्: 9808699164">Call Now: 9808699164</span>
+                </a>
+                <a href="https://wa.me/9779808699164" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span data-en="WhatsApp Us" data-ne="WhatsApp गर्नुहोस्">WhatsApp Us</span>
+                </a>
+                <a href="{{ url_for('booking') }}" class="btn btn-secondary">
+                    <i class="fas fa-calendar-check"></i>
+                    <span data-en="Book Appointment" data-ne="अपोइन्टमेन्ट बुक गर्नुहोस्">Book Appointment</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

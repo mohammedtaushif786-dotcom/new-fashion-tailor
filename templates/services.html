@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+
+{% block title %}Our Services - NEW FASHION TAILOR{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title">Our Services</h1>
+        <p class="page-subtitle">Comprehensive Tailoring Solutions for Every Need</p>
+        <nav class="breadcrumb">
+            <a href="{{ url_for('home') }}">Home</a>
+            <span>/</span>
+            <span>Services</span>
+        </nav>
+    </div>
+</section>
+
+<section class="service-detail" id="school">
+    <div class="container">
+        <div class="service-detail-grid">
+            <div class="service-detail-content">
+                <div class="service-detail-icon">🎒</div>
+                <h2>School Uniforms & Dresses</h2>
+                <p>We understand the importance of school uniforms in building identity and discipline. Our school uniform service covers:</p>
+                <ul class="service-detail-list">
+                    <li>All school patterns and designs</li>
+                    <li>Durable fabrics for daily wear</li>
+                    <li>Comfortable fitting for active students</li>
+                    <li>Bulk orders with quick turnaround</li>
+                    <li>Reasonable pricing for schools and parents</li>
+                    <li>Embroidery and logo work available</li>
+                </ul>
+                <div class="service-cta">
+                    <a href="tel:+9779808699164" class="btn btn-primary">Order Now</a>
+                </div>
+            </div>
+            <div class="service-detail-visual">
+                <div class="service-price-card">
+                    <h3>Starting From</h3>
+                    <div class="price">Rs. 500</div>
+                    <p>per uniform set</p>
+                    <ul>
+                        <li>✓ Free fitting</li>
+                        <li>✓ Quality fabric</li>
+                        <li>✓ Quick delivery</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="service-detail alt" id="wedding">
+    <div class="container">
+        <div class="service-detail-grid reverse">
+            <div class="service-detail-content">
+                <div class="service-detail-icon">💍</div>
+                <h2>Wedding & Bridal Collection</h2>
+                <p>Your special day deserves special outfits. Our wedding collection includes:</p>
+                <ul class="service-detail-list">
+                    <li>Bridal Lehengas & Sarees</li>
+                    <li>Groom's Sherwanis & Suits</li>
+                    <li>Traditional Nepali Wedding Attire</li>
+                    <li>Custom embroidery and embellishments</li>
+                    <li>Family outfit coordination</li>
+                    <li>Multiple trial fittings included</li>
+                </ul>
+                <div class="service-cta">
+                    <a href="tel:+9779808699164" class="btn btn-primary">Book Consultation</a>
+                </div>
+            </div>
+            <div class="service-detail-visual">
+                <div class="service-price-card premium">
+                    <h3>Premium Service</h3>
+                    <div class="price">Custom Quote</div>
+                    <p>Based on design</p>
+                    <ul>
+                        <li>✓ Premium fabrics</li>
+                        <li>✓ Custom designs</li>
+                        <li>✓ Multiple fittings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="service-detail" id="official">
+    <div class="container">
+        <div class="service-detail-grid">
+            <div class="service-detail-content">
+                <div class="service-detail-icon">👔</div>
+                <h2>Official & Professional Wear</h2>
+                <p>Dress for success with our professional attire collection:</p>
+                <ul class="service-detail-list">
+                    <li>Business Suits (2-piece & 3-piece)</li>
+                    <li>Formal Shirts & Trousers</li>
+                    <li>Blazers & Jackets</li>
+                    <li>Office Wear for Men & Women</li>
+                    <li>Interview & Presentation Outfits</li>
+                    <li>Corporate Uniforms</li>
+                </ul>
+                <div class="service-cta">
+                    <a href="tel:+9779808699164" class="btn btn-primary">Get Quote</a>
+                </div>
+            </div>
+            <div class="service-detail-visual">
+                <div class="service-price-card">
+                    <h3>Starting From</h3>
+                    <div class="price">Rs. 1,500</div>
+                    <p>per outfit</p>
+                    <ul>
+                        <li>✓ Perfect fit</li>
+                        <li>✓ Quality fabric</li>
+                        <li>✓ Professional look</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="service-detail alt" id="custom">
+    <div class="container">
+        <div class="service-detail-grid reverse">
+            <div class="service-detail-content">
+                <div class="service-detail-icon">✨</div>
+                <h2>Custom & Designer Wear</h2>
+                <p>Bring your dream designs to life with our custom tailoring service:</p>
+                <ul class="service-detail-list">
+                    <li>Custom pattern making</li>
+                    <li>Designer dress creation</li>
+                    <li>Traditional Nepali attire</li>
+                    <li>Modern western outfits</li>
+                    <li>Cultural and festive wear</li>
+                    <li>Complete wardrobe solutions</li>
+                </ul>
+                <div class="service-cta">
+                    <a href="{{ url_for('contact') }}" class="btn btn-primary">Discuss Your Design</a>
+                </div>
+            </div>
+            <div class="service-detail-visual">
+                <div class="service-price-card">
+                    <h3>Your Design</h3>
+                    <div class="price">Custom</div>
+                    <p>Tailored for you</p>
+                    <ul>
+                        <li>✓ Your design, our craft</li>
+                        <li>✓ Premium materials</li>
+                        <li>✓ Unlimited revisions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="service-detail" id="alteration">
+    <div class="container">
+        <div class="service-detail-grid">
+            <div class="service-detail-content">
+                <div class="service-detail-icon">🔄</div>
+                <h2>Alterations & Repairs</h2>
+                <p>Give your old clothes a new life with our expert alteration services:</p>
+                <ul class="service-detail-list">
+                    <li>Size adjustments</li>
+                    <li>Hemming and shortening</li>
+                    <li>Taking in or letting out</li>
+                    <li>Zipper replacement</li>
+                    <li>Button replacement</li>
+                    <li>General repairs and maintenance</li>
+                </ul>
+                <div class="service-cta">
+                    <a href="tel:+9779808699164" class="btn btn-primary">Get It Altered</a>
+                </div>
+            </div>
+            <div class="service-detail-visual">
+                <div class="service-price-card">
+                    <h3>Quick Service</h3>
+                    <div class="price">Rs. 100+</div>
+                    <p>depending on work</p>
+                    <ul>
+                        <li>✓ Same day service</li>
+                        <li>✓ Expert tailoring</li>
+                        <li>✓ Affordable rates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Need a Custom Service?</h2>
+            <p>Contact us for any tailoring requirement. We're here to help!</p>
+            <div class="cta-buttons">
+                <a href="tel:+9779808699164" class="btn btn-primary">Call: 9808699164</a>
+                <a href="https://wa.me/9779808699164" class="btn btn-whatsapp">WhatsApp Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

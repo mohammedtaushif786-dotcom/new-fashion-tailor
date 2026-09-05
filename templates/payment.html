@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+
+{% block title %}Online Payment - NEW FASHION TAILOR{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title" data-en="Online Payment" data-ne="अनलाइन भुक्तानी">Online Payment</h1>
+        <p class="page-subtitle" data-en="Easy & Secure Payment Options" data-ne="सजिलो र सुरक्षित भुक्तानी विकल्प">Easy & Secure Payment Options</p>
+        <nav class="breadcrumb">
+            <a href="{{ url_for('home') }}" data-en="Home" data-ne="गृह">Home</a>
+            <span>/</span>
+            <span data-en="Online Payment" data-ne="अनलाइन भुक्तानी">Online Payment</span>
+        </nav>
+    </div>
+</section>
+
+<section class="payment-section">
+    <div class="container">
+        <div class="payment-intro">
+            <h2 data-en="Pay Easily From Home" data-ne="घरबाट सजिलै भुक्तानी गर्नुहोस्">Pay Easily From Home</h2>
+            <p data-en="Choose from multiple secure payment methods. All transactions are encrypted and secure." data-ne="धेरै सुरक्षित भुक्तानी विधिबाट छान्नुहोस्। सबै कारोबारहरू एन्क्रिप्टेड र सुरक्षित छन्।">Choose from multiple secure payment methods. All transactions are encrypted and secure.</p>
+        </div>
+
+        <div class="payment-methods">
+            <div class="payment-card">
+                <div class="payment-logo" style="background: #60BB46;">
+                    <span>eSewa</span>
+                </div>
+                <h3>eSewa</h3>
+                <p data-en="Nepal's most popular digital wallet" data-ne="नेपालको सबैभन्दा लोकप्रिय डिजिटल वालेट">Nepal's most popular digital wallet</p>
+                <div class="payment-details">
+                    <div class="payment-field">
+                        <label data-en="eSewa ID:" data-ne="eSewa ID:">eSewa ID:</label>
+                        <span class="payment-value">9808699164</span>
+                    </div>
+                    <div class="payment-field">
+                        <label data-en="Account Name:" data-ne="खाता नाम:">Account Name:</label>
+                        <span class="payment-value">New Fashion Tailor</span>
+                    </div>
+                </div>
+                <div class="payment-steps">
+                    <h4 data-en="How to Pay:" data-ne="कसरी भुक्तानी गर्ने:">How to Pay:</h4>
+                    <ol>
+                        <li data-en="Open eSewa app" data-ne="eSewa एप खोल्नुहोस्">Open eSewa app</li>
+                        <li data-en="Tap on 'Send Money'" data-ne="'Send Money' मा ट्याप गर्नुहोस्">Tap on 'Send Money'</li>
+                        <li data-en="Enter the ID above" data-ne="माथिको ID प्रविष्ट गर्नुहोस्">Enter the ID above</li>
+                        <li data-en="Enter amount and send" data-ne="रकम प्रविष्ट गर्नुहोस् र पठाउनुहोस्">Enter amount and send</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="payment-card featured">
+                <div class="payment-badge" data-en="Recommended" data-ne="सिफारिस गरिएको">Recommended</div>
+                <div class="payment-logo" style="background: #5C2D91;">
+                    <span>Khalti</span>
+                </div>
+                <h3>Khalti</h3>
+                <p data-en="Fast & secure digital payments" data-ne="छिटो र सुरक्षित डिजिटल भुक्तानी">Fast & secure digital payments</p>
+                <div class="payment-details">
+                    <div class="payment-field">
+                        <label data-en="Khalti ID:" data-ne="Khalti ID:">Khalti ID:</label>
+                        <span class="payment-value">9808699164</span>
+                    </div>
+                    <div class="payment-field">
+                        <label data-en="Account Name:" data-ne="खाता नाम:">Account Name:</label>
+                        <span class="payment-value">New Fashion Tailor</span>
+                    </div>
+                </div>
+                <div class="payment-steps">
+                    <h4 data-en="How to Pay:" data-ne="कसरी भुक्तानी गर्ने:">How to Pay:</h4>
+                    <ol>
+                        <li data-en="Open Khalti app" data-ne="Khalti एप खोल्नुहोस्">Open Khalti app</li>
+                        <li data-en="Tap on 'Send Money'" data-ne="'Send Money' मा ट्याप गर्नुहोस्">Tap on 'Send Money'</li>
+                        <li data-en="Enter the ID above" data-ne="माथिको ID प्रविष्ट गर्नुहोस्">Enter the ID above</li>
+                        <li data-en="Enter amount and send" data-ne="रकम प्रविष्ट गर्नुहोस् र पठाउनुहोस्">Enter amount and send</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="payment-card">
+                <div class="payment-logo" style="background: #1A1F71;">
+                    <span>IME Pay</span>
+                </div>
+                <h3>IME Pay</h3>
+                <p data-en="Trusted remittance & payment service" data-ne="विश्वसनीय रेमिट्यान्स र भुक्तानी सेवा">Trusted remittance & payment service</p>
+                <div class="payment-details">
+                    <div class="payment-field">
+                        <label data-en="IME Pay ID:" data-ne="IME Pay ID:">IME Pay ID:</label>
+                        <span class="payment-value">9808699164</span>
+                    </div>
+                    <div class="payment-field">
+                        <label data-en="Account Name:" data-ne="खाता नाम:">Account Name:</label>
+                        <span class="payment-value">New Fashion Tailor</span>
+                    </div>
+                </div>
+                <div class="payment-steps">
+                    <h4 data-en="How to Pay:" data-ne="कसरी भुक्तानी गर्ने:">How to Pay:</h4>
+                    <ol>
+                        <li data-en="Open IME Pay app" data-ne="IME Pay एप खोल्नुहोस्">Open IME Pay app</li>
+                        <li data-en="Tap on 'Send Money'" data-ne="'Send Money' मा ट्याप गर्नुहोस्">Tap on 'Send Money'</li>
+                        <li data-en="Enter the ID above" data-ne="माथिको ID प्रविष्ट गर्नुहोस्">Enter the ID above</li>
+                        <li data-en="Enter amount and send" data-ne="रकम प्रविष्ट गर्नुहोस् र पठाउनुहोस्">Enter amount and send</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="bank-transfer">
+            <h3><i class="fas fa-university"></i> <span data-en="Bank Transfer" data-ne="बैंक ट्रान्सफर">Bank Transfer</span></h3>
+            <div class="bank-details">
+                <div class="bank-info">
+                    <div class="bank-field">
+                        <label data-en="Bank Name:" data-ne="बैंक नाम:">Bank Name:</label>
+                        <span>Nepal Investment Bank Limited</span>
+                    </div>
+                    <div class="bank-field">
+                        <label data-en="Account Number:" data-ne="खाता नम्बर:">Account Number:</label>
+                        <span>01234567890123</span>
+                    </div>
+                    <div class="bank-field">
+                        <label data-en="Account Name:" data-ne="खाता नाम:">Account Name:</label>
+                        <span>New Fashion Tailor</span>
+                    </div>
+                    <div class="bank-field">
+                        <label data-en="Branch:" data-ne="शाखा:">Branch:</label>
+                        <span>Lalitpur</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-note">
+            <div class="note-icon">💡</div>
+            <div class="note-content">
+                <h4 data-en="Important Note" data-ne="महत्वपूर्ण नोट">Important Note</h4>
+                <p data-en="After making the payment, please send the screenshot of the transaction to our WhatsApp number (9808699164) or email (tamannakha84@gmail.com) with your name and order details. We will confirm your payment within 1 hour." data-ne="भुक्तानी गरेपछि, कृपया कारोबारको स्क्रिनसट हाम्रो WhatsApp नम्बर (9808699164) वा इमेल (tamannakha84@gmail.com) मा तपाईंको नाम र अर्डर विवरणसहित पठाउनुहोस्। हामी १ घण्टाभित्र तपाईंको भुक्तानी पुष्टि गर्नेछौं।">After making the payment, please send the screenshot of the transaction to our WhatsApp number (9808699164) or email (tamannakha84@gmail.com) with your name and order details. We will confirm your payment within 1 hour.</p>
+            </div>
+        </div>
+
+        <div class="payment-faq">
+            <h3 data-en="Frequently Asked Questions" data-ne="बारम्बार सोधिने प्रश्नहरू">Frequently Asked Questions</h3>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span data-en="Is online payment safe?" data-ne="के अनलाइन भुक्तानी सुरक्षित छ?">Is online payment safe?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="Yes, all our payment methods are verified and secure. We use official eSewa, Khalti, and IME Pay platforms." data-ne="हो, हाम्रा सबै भुक्तानी विधिहरू प्रमाणित र सुरक्षित छन्। हामी आधिकारिक eSewa, Khalti, र IME Pay प्लेटफर्महरू प्रयोग गर्छौं।">Yes, all our payment methods are verified and secure. We use official eSewa, Khalti, and IME Pay platforms.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span data-en="When will my payment be confirmed?" data-ne="मेरो भुक्तानी कहिले पुष्टि हुन्छ?">When will my payment be confirmed?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="We confirm payments within 1 hour during business hours (9 AM - 7 PM). You will receive a confirmation on WhatsApp." data-ne="हामी व्यापारिक घण्टामा (बिहान ९ - साँझ ७) १ घण्टाभित्र भुक्तानी पुष्टि गर्छौं। तपाईंलाई WhatsApp मा पुष्टि प्राप्त हुनेछ।">We confirm payments within 1 hour during business hours (9 AM - 7 PM). You will receive a confirmation on WhatsApp.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="this.parentElement.classList.toggle('active')">
+                        <span data-en="Can I pay after delivery?" data-ne="के म डेलिभरीपछि भुक्तानी गर्न सक्छु?">Can I pay after delivery?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-en="Yes, we also offer cash on delivery for local customers in Lalitpur. Contact us for details." data-ne="हो, हामी ललितपुरका स्थानीय ग्राहकहरूका लागि क्यास अन डेलिभरी पनि प्रदान गर्छौं। विवरणको लागि हामीसँग सम्पर्क गर्नुहोस्।">Yes, we also offer cash on delivery for local customers in Lalitpur. Contact us for details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

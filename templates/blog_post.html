@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ post.title }} - NEW FASHION TAILOR{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title">{{ post.title }}</h1>
+        <p class="page-subtitle">{{ post.excerpt }}</p>
+        <nav class="breadcrumb">
+            <a href="{{ url_for('home') }}" data-en="Home" data-ne="गृह">Home</a>
+            <span>/</span>
+            <a href="{{ url_for('blog') }}" data-en="Blog" data-ne="ब्लग">Blog</a>
+            <span>/</span>
+            <span>{{ post.title }}</span>
+        </nav>
+    </div>
+</section>
+
+<section class="blog-post-section">
+    <div class="container">
+        <div class="blog-post-grid">
+            <article class="blog-post-content">
+                <div class="blog-post-meta">
+                    <span class="blog-category-badge">{{ post.category|capitalize }}</span>
+                    <span><i class="fas fa-calendar"></i> {{ post.date }}</span>
+                    <span><i class="fas fa-clock"></i> {{ post.read_time }}</span>
+                </div>
+                
+                <div class="blog-post-featured-image">
+                    <img src="https://images.unsplash.com/photo-{{ '1503676260728-1c00da094a0b' if post.category == 'school' else '1594552072238-5763e1e4fa7d' if post.category == 'wedding' else '1507003211169-0a1dd7228f2d' if post.category == 'official' else '1558618666-fcd25c85f82e' }}?w=800&h=450&fit=crop" alt="{{ post.title }}">
+                </div>
+
+                <div class="blog-post-body">
+                    <p>{{ post.content }}</p>
+                    
+                    {% if post.slug == 'school-uniform-trends-nepal-2026' %}
+                    <h2>1. Sustainable Fabrics</h2>
+                    <p>Schools in Nepal are increasingly choosing eco-friendly fabrics for uniforms. Cotton and cotton-blend materials are popular for their comfort and durability.</p>
+                    
+                    <h2>2. Color Psychology</h2>
+                    <p>Blue promotes calmness and focus, while green encourages creativity. Many schools are choosing colors that enhance learning.</p>
+                    
+                    <h2>3. Comfort-First Design</h2>
+                    <p>Modern uniforms prioritize student comfort with breathable fabrics and ergonomic designs that allow free movement during activities.</p>
+                    
+                    <h2>4. Durability Matters</h2>
+                    <p>Parents want uniforms that last. Reinforced stitching and quality materials ensure uniforms withstand daily wear and washing.</p>
+                    
+                    <h2>5. Custom Embroidery</h2>
+                    <p>School logos and names embroidered with precision add a professional touch to uniforms.</p>
+                    
+                    {% elif post.slug == 'wedding-dress-trends-nepali-bridal-2026' %}
+                    <h2>Traditional Elegance</h2>
+                    <p>Nepali bridal fashion continues to honor traditional designs while incorporating modern elements. Red and maroon remain popular colors.</p>
+                    
+                    <h2>Contemporary Fusion</h2>
+                    <p>Modern brides are blending traditional Nepali elements with contemporary silhouettes for a unique look.</p>
+                    
+                    <h2>Handcrafted Embroidery</h2>
+                    <p>Intricate hand embroidery work is making a comeback, adding luxury and personalization to bridal outfits.</p>
+                    
+                    {% else %}
+                    <h2>Understanding Your Needs</h2>
+                    <p>Every outfit tells a story. Whether it is a school uniform, wedding dress, or professional attire, choosing the right elements is crucial.</p>
+                    
+                    <h2>Quality Materials</h2>
+                    <p>The foundation of any great outfit is quality fabric. We source only the finest materials for our customers.</p>
+                    
+                    <h2>Expert Craftsmanship</h2>
+                    <p>Our experienced tailors combine traditional techniques with modern precision to create perfect garments.</p>
+                    {% endif %}
+                </div>
+
+                <div class="blog-post-share">
+                    <h4 data-en="Share this article" data-ne="यो लेख बाँड्नुहोस्">Share this article</h4>
+                    <div class="share-buttons">
+                        <a href="https://wa.me/?text={{ post.title }} - {{ request.url }}" target="_blank" class="share-btn whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.url }}" target="_blank" class="share-btn facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="mailto:?subject={{ post.title }}&body=Check this article: {{ request.url }}" class="share-btn email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <aside class="blog-sidebar">
+                <div class="sidebar-widget">
+                    <h3 data-en="Categories" data-ne="वर्गहरू">Categories</h3>
+                    <ul class="sidebar-categories">
+                        <li><a href="{{ url_for('blog') }}">All Posts</a></li>
+                        <li><a href="{{ url_for('blog') }}">School Uniforms</a></li>
+                        <li><a href="{{ url_for('blog') }}">Wedding Collection</a></li>
+                        <li><a href="{{ url_for('blog') }}">Official Wear</a></li>
+                        <li><a href="{{ url_for('blog') }}">Tips & Advice</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 data-en="Recent Posts" data-ne="हालका पोस्टहरू">Recent Posts</h3>
+                    <ul class="sidebar-posts">
+                        {% for p in all_posts[:3] %}
+                        <li>
+                            <a href="{{ url_for('blog_post', slug=p.slug) }}">
+                                <span class="post-title">{{ p.title }}</span>
+                                <span class="post-date">{{ p.date }}</span>
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget cta-widget">
+                    <h3 data-en="Need Tailoring?" data-ne="टाइलरिङ चाहिन्छ?">Need Tailoring?</h3>
+                    <p data-en="Contact us for all your tailoring needs." data-ne="तपाईंका सबै टाइलरिङ आवश्यकताका लागि हामीसँग सम्पर्क गर्नुहोस्।">Contact us for all your tailoring needs.</p>
+                    <a href="tel:+9779808699164" class="btn btn-primary btn-full">
+                        <i class="fas fa-phone"></i> 9808699164
+                    </a>
+                    <a href="{{ url_for('booking') }}" class="btn btn-secondary btn-full" style="margin-top: 10px;">
+                        <i class="fas fa-calendar-check"></i> <span data-en="Book Now" data-ne="अहिले बुक गर्नुहोस्">Book Now</span>
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+{% endblock %}

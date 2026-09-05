@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}Google Reviews - NEW FASHION TAILOR{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title" data-en="Google Reviews" data-ne="गुगल समीक्षा">Google Reviews</h1>
+        <p class="page-subtitle" data-en="See What Our Customers Are Saying" data-ne="हाम्रा ग्राहकहरूले के भन्छन् हेर्नुहोस्">See What Our Customers Are Saying</p>
+        <nav class="breadcrumb">
+            <a href="{{ url_for('home') }}" data-en="Home" data-ne="गृह">Home</a>
+            <span>/</span>
+            <span data-en="Google Reviews" data-ne="गुगल समीक्षा">Google Reviews</span>
+        </nav>
+    </div>
+</section>
+
+<section class="reviews-page">
+    <div class="container">
+        <div class="reviews-summary-large">
+            <div class="reviews-score-large">
+                <span class="score-large">4.9</span>
+                <div class="stars-large">★★★★★</div>
+                <span class="review-count-large" data-en="Based on 50+ Google Reviews" data-ne="50+ गुगल समीक्षामा आधारित">Based on 50+ Google Reviews</span>
+                <div class="rating-bars">
+                    <div class="rating-bar">
+                        <span>5 ★</span>
+                        <div class="bar"><div class="bar-fill" style="width: 85%"></div></div>
+                        <span>85%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>4 ★</span>
+                        <div class="bar"><div class="bar-fill" style="width: 10%"></div></div>
+                        <span>10%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>3 ★</span>
+                        <div class="bar"><div class="bar-fill" style="width: 3%"></div></div>
+                        <span>3%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>2 ★</span>
+                        <div class="bar"><div class="bar-fill" style="width: 1%"></div></div>
+                        <span>1%</span>
+                    </div>
+                    <div class="rating-bar">
+                        <span>1 ★</span>
+                        <div class="bar"><div class="bar-fill" style="width: 1%"></div></div>
+                        <span>1%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews-grid-large">
+            {% for review in reviews %}
+            <div class="review-card-large">
+                <div class="review-header">
+                    <div class="review-avatar-large">{{ review.avatar }}</div>
+                    <div class="review-info">
+                        <h4>{{ review.name }}</h4>
+                        <span class="review-date">{{ review.date }}</span>
+                    </div>
+                    <div class="review-rating">
+                        {% for i in range(review.rating) %}★{% endfor %}
+                    </div>
+                </div>
+                <p class="review-text">{{ review.text }}</p>
+                <div class="review-source">
+                    <i class="fab fa-google"></i> <span data-en="Posted on Google" data-ne="गुगलमा पोस्ट गरिएको">Posted on Google</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="reviews-cta-large">
+            <a href="https://g.page/r/newfashiontailor/review" target="_blank" class="btn btn-primary btn-large">
+                <i class="fab fa-google"></i>
+                <span data-en="Write a Google Review" data-ne="गुगल समीक्षा लेख्नुहोस्">Write a Google Review</span>
+            </a>
+            <a href="https://wa.me/9779808699164" class="btn btn-whatsapp btn-large">
+                <i class="fab fa-whatsapp"></i>
+                <span data-en="Share Your Feedback" data-ne="तपाईंको प्रतिक्रिया बाँड्नुहोस्">Share Your Feedback</span>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

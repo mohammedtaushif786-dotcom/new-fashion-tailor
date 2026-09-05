@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block title %}Fashion Blog - NEW FASHION TAILOR{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title" data-en="Fashion Blog" data-ne="फ्यासन ब्लग">Fashion Blog</h1>
+        <p class="page-subtitle" data-en="Tips, Trends & Style Guide" data-ne="सुझाव, प्रचलन र शैली मार्गदर्शन">Tips, Trends & Style Guide</p>
+        <nav class="breadcrumb">
+            <a href="{{ url_for('home') }}" data-en="Home" data-ne="गृह">Home</a>
+            <span>/</span>
+            <span data-en="Blog" data-ne="ब्लग">Blog</span>
+        </nav>
+    </div>
+</section>
+
+<section class="blog-section">
+    <div class="container">
+        <div class="blog-filter">
+            <button class="filter-btn active" data-filter="all" data-en="All" data-ne="सबै">All</button>
+            <button class="filter-btn" data-filter="school" data-en="School" data-ne="विद्यालय">School</button>
+            <button class="filter-btn" data-filter="wedding" data-en="Wedding" data-ne="विवाह">Wedding</button>
+            <button class="filter-btn" data-filter="official" data-en="Official" data-ne="अधिकारिक">Official</button>
+            <button class="filter-btn" data-filter="tips" data-en="Tips" data-ne="सुझाव">Tips</button>
+        </div>
+
+        <div class="blog-grid-large">
+            {% for post in posts %}
+            <div class="blog-card-large" data-category="{{ post.category }}">
+                <div class="blog-image-large">
+                    <img src="https://images.unsplash.com/photo-{{ '1503676260728-1c00da094a0b' if post.category == 'school' else '1594552072238-5763e1e4fa7d' if post.category == 'wedding' else '1507003211169-0a1dd7228f2d' if post.category == 'official' else '1558618666-fcd25c85f82e' }}?w=600&h=350&fit=crop" alt="{{ post.title }}">
+                    <span class="blog-category-badge" data-en="{{ post.category|capitalize }}" data-ne="{{ 'विद्यालय' if post.category == 'school' else 'विवाह' if post.category == 'wedding' else 'अधिकारिक' if post.category == 'official' else 'सुझाव' }}">{{ post.category|capitalize }}</span>
+                </div>
+                <div class="blog-content-large">
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar"></i> {{ post.date }}</span>
+                        <span><i class="fas fa-clock"></i> {{ post.read_time }}</span>
+                    </div>
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.excerpt }}</p>
+                    <a href="{{ url_for('blog_post', slug=post.slug) }}" class="btn btn-primary btn-small">
+                        <span data-en="Read Article" data-ne="लेख पढ्नुहोस्">Read Article</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="newsletter-section">
+    <div class="container">
+        <div class="newsletter-content">
+            <h2 data-en="Stay Updated" data-ne="अपडेट रहनुहोस्">Stay Updated</h2>
+            <p data-en="Subscribe to our newsletter for the latest fashion tips and offers." data-ne="नवीनतम फ्यासन सुझाव र अफरहरूको लागि हाम्रो न्यूजलेटरमा सदस्यता लिनुहोस्।">Subscribe to our newsletter for the latest fashion tips and offers.</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email">
+                <button class="btn btn-primary" data-en="Subscribe" data-ne="सदस्यता लिनुहोस्">Subscribe</button>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

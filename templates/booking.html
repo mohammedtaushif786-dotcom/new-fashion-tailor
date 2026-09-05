@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+
+{% block title %}Book Appointment - NEW FASHION TAILOR{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title" data-en="Book Appointment" data-ne="अपोइन्टमेन्ट बुक गर्नुहोस्">Book Appointment</h1>
+        <p class="page-subtitle" data-en="Schedule Your Visit to Our Shop" data-ne="हाम्रो पसलमा तपाईंको भ्रमण तालिका बनाउनुहोस्">Schedule Your Visit to Our Shop</p>
+        <nav class="breadcrumb">
+            <a href="{{ url_for('home') }}" data-en="Home" data-ne="गृह">Home</a>
+            <span>/</span>
+            <span data-en="Book Appointment" data-ne="अपोइन्टमेन्ट बुक गर्नुहोस्">Book Appointment</span>
+        </nav>
+    </div>
+</section>
+
+<section class="booking-section">
+    <div class="container">
+        <div class="booking-grid">
+            <div class="booking-form-wrapper">
+                <h2 data-en="Book Your Appointment" data-ne="तपाईंको अपोइन्टमेन्ट बुक गर्नुहोस्">Book Your Appointment</h2>
+                <p data-en="Fill out the form below to schedule your visit. We will call you to confirm." data-ne="तपाईंको भ्रमण तालिका बनाउन माथिको फारम भर्नुहोस्। हामी पुष्टि गर्न तपाईंलाई कल गर्नेछौं।">Fill out the form below to schedule your visit. We will call you to confirm.</p>
+                
+                <form method="POST" action="{{ url_for('booking') }}" class="booking-form">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    
+                    <div class="form-group">
+                        <label for="name" data-en="Full Name *" data-ne="पूरा नाम *">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" data-en="Phone Number *" data-ne="फोन नम्बर *">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="98XXXXXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-en="Email Address" data-ne="इमेल ठेगाना">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service" data-en="Service Required *" data-ne="आवश्यक सेवा *">Service Required *</label>
+                        <select id="service" name="service" required>
+                            <option value="" data-en="Select a service" data-ne="सेवा छान्नुहोस्">Select a service</option>
+                            <option value="school" data-en="School Uniforms" data-ne="विद्यालय वर्दी">School Uniforms</option>
+                            <option value="wedding" data-en="Wedding Collection" data-ne="विवाह सङ्ग्रह">Wedding Collection</option>
+                            <option value="official" data-en="Official Wear" data-ne="अधिकारिक पहिरन">Official Wear</option>
+                            <option value="custom" data-en="Custom Tailoring" data-ne="कस्टम टाइलरिङ">Custom Tailoring</option>
+                            <option value="alteration" data-en="Alterations" data-ne="समायोजन">Alterations</option>
+                            <option value="other" data-en="Other" data-ne="अन्य">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date" data-en="Preferred Date *" data-ne="पसन्द मिति *">Preferred Date *</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time" data-en="Preferred Time" data-ne="पसन्द समय">Preferred Time</label>
+                            <select id="time" name="time">
+                                <option value="morning" data-en="Morning (9 AM - 12 PM)" data-ne="बिहान (९ बजे - १२ बजे)">Morning (9 AM - 12 PM)</option>
+                                <option value="afternoon" data-en="Afternoon (12 PM - 4 PM)" data-ne="दिउँसो (१२ बजे - ४ बजे)">Afternoon (12 PM - 4 PM)</option>
+                                <option value="evening" data-en="Evening (4 PM - 7 PM)" data-ne="साँझ (४ बजे - ७ बजे)">Evening (4 PM - 7 PM)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes" data-en="Additional Notes" data-ne="थप नोट">Additional Notes</label>
+                        <textarea id="notes" name="notes" rows="4" placeholder="Tell us about your requirements..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-calendar-check"></i>
+                        <span data-en="Book Appointment" data-ne="अपोइन्टमेन्ट बुक गर्नुहोस्">Book Appointment</span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="booking-info-wrapper">
+                <div class="booking-info-card">
+                    <h3 data-en="Why Book an Appointment?" data-ne="अपोइन्टमेन्ट किन बुक गर्ने?">Why Book an Appointment?</h3>
+                    <ul class="booking-benefits">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span data-en="Get dedicated time with our expert tailors" data-ne="हाम्रा विशेषज्ञ टाइलरहरूसँग समर्पित समय पाउनुहोस्">Get dedicated time with our expert tailors</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span data-en="Avoid waiting in queue" data-ne="लाइनमा पर्खनबाट बच्नुहोस्">Avoid waiting in queue</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span data-en="Discuss your requirements in detail" data-ne="तपाईंको आवश्यकता विस्तृत रूपमा छलफल गर्नुहोस्">Discuss your requirements in detail</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span data-en="Get accurate measurements" data-ne="सटीक मापन पाउनुहोस्">Get accurate measurements</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span data-en="See fabric samples and designs" data-ne="कपडा नमूना र डिजाइन हेर्नुहोस्">See fabric samples and designs</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span data-en="Get accurate price quote" data-ne="सटीक मूल्य उद्धरण पाउनुहोस्">Get accurate price quote</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="booking-contact-card">
+                    <h3 data-en="Prefer to Call?" data-ne="कल गर्न चाहनुहुन्छ?">Prefer to Call?</h3>
+                    <p data-en="You can also book your appointment by calling us directly." data-ne="तपाईं हामीलाई प्रत्यक्ष कल गरेर पनि अपोइन्टमेन्ट बुक गर्न सक्नुहुन्छ।">You can also book your appointment by calling us directly.</p>
+                    <div class="booking-phone">
+                        <a href="tel:+9779808699164" class="btn btn-primary btn-full">
+                            <i class="fas fa-phone"></i>
+                            <span>9808699164</span>
+                        </a>
+                        <a href="tel:+9779866255830" class="btn btn-secondary btn-full">
+                            <i class="fas fa-phone"></i>
+                            <span>9866255830</span>
+                        </a>
+                    </div>
+                    <div class="booking-whatsapp">
+                        <a href="https://wa.me/9779808699164" class="btn btn-whatsapp btn-full">
+                            <i class="fab fa-whatsapp"></i>
+                            <span data-en="WhatsApp Us" data-ne="WhatsApp गर्नुहोस्">WhatsApp Us</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="booking-hours-card">
+                    <h3 data-en="Working Hours" data-ne="कार्य समय">Working Hours</h3>
+                    <div class="hours-list">
+                        <div class="hours-item">
+                            <span data-en="Sunday - Thursday" data-ne="आइतबार - बिहीबार">Sunday - Thursday</span>
+                            <span>9:00 AM - 7:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span data-en="Friday" data-ne="शुक्रबार">Friday</span>
+                            <span>9:00 AM - 5:00 PM</span>
+                        </div>
+                        <div class="hours-item">
+                            <span data-en="Saturday" data-ne="शनिबार">Saturday</span>
+                            <span>10:00 AM - 4:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NEW FASHION TAILOR - Professional tailoring services in Lalitpur, Nepal. School uniforms, wedding dresses, official wear, and custom stitching.">
+    <meta name="keywords" content="tailor, custom tailoring, school uniforms, wedding dresses, official wear, Lalitpur, Nepal, नयाँ फ्यासन टाइलर">
+    <meta name="author" content="NEW FASHION TAILOR">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <title>{% block title %}NEW FASHION TAILOR{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="{{ url_for('home') }}" class="logo">
+                <span class="logo-icon">✂</span>
+                <div class="logo-text">
+                    <span class="logo-name">NEW FASHION</span>
+                    <span class="logo-sub">TAILOR</span>
+                </div>
+            </a>
+            
+            <div class="nav-right">
+                <button class="lang-toggle" id="langToggle" title="Switch Language">
+                    <span class="lang-en">EN</span>
+                    <span class="lang-ne">नेपाली</span>
+                </button>
+                
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('home') }}" class="nav-link" data-en="Home" data-ne="गृह">Home</a></li>
+                <li><a href="{{ url_for('about') }}" class="nav-link" data-en="About" data-ne="बारेमा">About</a></li>
+                <li><a href="{{ url_for('services') }}" class="nav-link" data-en="Services" data-ne="सेवाहरू">Services</a></li>
+                <li><a href="{{ url_for('blog') }}" class="nav-link" data-en="Blog" data-ne="ब्लग">Blog</a></li>
+                <li><a href="{{ url_for('gallery') }}" class="nav-link" data-en="Gallery" data-ne="ग्यालरी">Gallery</a></li>
+                <li><a href="{{ url_for('reviews') }}" class="nav-link" data-en="Reviews" data-ne="समीक्षा">Reviews</a></li>
+                <li><a href="{{ url_for('payment') }}" class="nav-link" data-en="Pay" data-ne="भुक्तानी">Pay</a></li>
+                <li><a href="{{ url_for('contact') }}" class="nav-link" data-en="Contact" data-ne="सम्पर्क">Contact</a></li>
+                <li><a href="{{ url_for('booking') }}" class="nav-btn" data-en="Book Now" data-ne="अहिले बुक गर्नुहोस्">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash flash-{{ category }}">
+                            {{ message }}
+                            <button class="flash-close" onclick="this.parentElement.remove()">×</button>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,80 1440,60 L1440,120 L0,120 Z" fill="#1a1a2e"></path>
+            </svg>
+        </div>
+        <div class="footer-content">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-icon">✂</span>
+                        <h3 data-en="NEW FASHION TAILOR" data-ne="नयाँ फ्यासन टाइलर">NEW FASHION TAILOR</h3>
+                    </div>
+                    <p data-en="Crafting elegance with precision. Your trusted tailoring partner in Lalitpur, Nepal since years of dedicated service." data-ne="शुद्धताका साथ सुन्दरता निर्माण गर्दै। वर्षौंदेखि ललितपुर, नेपालमा तपाईंको विश्वसनीय टाइलरिङ साझेदार।">Crafting elegance with precision. Your trusted tailoring partner in Lalitpur, Nepal since years of dedicated service.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/9779808699164" class="social-link" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:+9779808699164" class="social-link" aria-label="Phone">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <a href="mailto:tamannakha84@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-ne="छिटो लिङ्कहरू">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="{{ url_for('home') }}" data-en="Home" data-ne="गृह">Home</a></li>
+                        <li><a href="{{ url_for('about') }}" data-en="About Us" data-ne="हाम्रो बारेमा">About Us</a></li>
+                        <li><a href="{{ url_for('services') }}" data-en="Our Services" data-ne="हाम्रा सेवाहरू">Our Services</a></li>
+                        <li><a href="{{ url_for('blog') }}" data-en="Blog" data-ne="ब्लग">Blog</a></li>
+                        <li><a href="{{ url_for('gallery') }}" data-en="Gallery" data-ne="ग्यालरी">Gallery</a></li>
+                        <li><a href="{{ url_for('reviews') }}" data-en="Google Reviews" data-ne="गुगल समीक्षा">Google Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Our Services" data-ne="हाम्रा सेवाहरू">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="{{ url_for('services') }}#school" data-en="School Uniforms" data-ne="विद्यालय वर्दी">School Uniforms</a></li>
+                        <li><a href="{{ url_for('services') }}#wedding" data-en="Wedding Dresses" data-ne="विवाह पोशाक">Wedding Dresses</a></li>
+                        <li><a href="{{ url_for('services') }}#official" data-en="Official Wear" data-ne="अधिकारिक पहिरन">Official Wear</a></li>
+                        <li><a href="{{ url_for('services') }}#custom" data-en="Custom Tailoring" data-ne="कस्टम टाइलरिङ">Custom Tailoring</a></li>
+                        <li><a href="{{ url_for('payment') }}" data-en="Online Payment" data-ne="अनलाइन भुक्तानी">Online Payment</a></li>
+                        <li><a href="{{ url_for('booking') }}" data-en="Book Appointment" data-ne="अपोइन्टमेन्ट बुक गर्नुहोस्">Book Appointment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Contact Info" data-ne="सम्पर्क जानकारी">Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-en="Imadol, Krishna Mandir, Mahalaxmi Nagarpalika, Lalitpur, Nepal" data-ne="इमाडोल, कृष्ण मन्दिर, महालक्ष्मी नगरपालिका, ललितपुर, नेपाल">Imadol, Krishna Mandir, Mahalaxmi Nagarpalika, Lalitpur, Nepal</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <a href="tel:+9779808699164">+977 9808699164</a>
+                                <a href="tel:+9779866255830">+977 9866255830</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:tamannakha84@gmail.com">tamannakha84@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/9779808699164" data-en="Chat on WhatsApp" data-ne="WhatsApp मा च्याट गर्नुहोस्">Chat on WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NEW FASHION TAILOR. <span data-en="All Rights Reserved." data-ne="सर्वाधिकार सुरक्षित।">All Rights Reserved.</span> | <span data-en="Made with ❤ in Nepal" data-ne="नेपालमा ❤ बनाइयो">Made with ❤ in Nepal</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/9779808699164" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

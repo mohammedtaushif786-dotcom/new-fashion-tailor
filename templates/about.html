@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us - NEW FASHION TAILOR{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title">About Us</h1>
+        <p class="page-subtitle">Our Journey of Crafting Excellence</p>
+        <nav class="breadcrumb">
+            <a href="{{ url_for('home') }}">Home</a>
+            <span>/</span>
+            <span>About Us</span>
+        </nav>
+    </div>
+</section>
+
+<section class="about-story">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-content">
+                <span class="section-tag">Our Story</span>
+                <h2>A Legacy of Tailoring Excellence</h2>
+                <p>NEW FASHION TAILOR has been serving the community of Lalitpur with dedication and passion for years. What started as a small tailoring shop has grown into one of the most trusted names in the region.</p>
+                <p>Our commitment to quality, precision, and customer satisfaction has earned us the loyalty of hundreds of families across Nepal. We take pride in every stitch we make, ensuring that each garment meets the highest standards of craftsmanship.</p>
+                <div class="about-stats">
+                    <div class="about-stat">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Years of Experience</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Satisfied Customers</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">School Partners</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div class="about-card">
+                    <div class="about-icon">✂️</div>
+                    <h3>Our Mission</h3>
+                    <p>To provide premium quality tailoring services that combine traditional craftsmanship with modern techniques, making every customer feel confident and satisfied.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🎯</div>
+                    <h3>Our Vision</h3>
+                    <p>To become the most trusted and preferred tailoring service provider in Nepal, known for quality, innovation, and customer delight.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="values-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Our Values</span>
+            <h2>What We Stand For</h2>
+        </div>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-number">01</div>
+                <h3>Quality First</h3>
+                <p>Never compromise on quality. Every garment we create is built to last.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-number">02</div>
+                <h3>Customer Trust</h3>
+                <p>Building lasting relationships through honest service and transparent communication.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-number">03</div>
+                <h3>Innovation</h3>
+                <p>Embracing new techniques and designs while honoring traditional craftsmanship.</p>
+            </div>
+            <div class="value-card">
+                <div class="value-number">04</div>
+                <h3>Community</h3>
+                <p>Proudly serving and supporting our local community in Lalitpur and beyond.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="team-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Our Team</span>
+            <h2>Meet the Experts</h2>
+            <p>Skilled artisans dedicated to creating your perfect garment</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-avatar">N</div>
+                <h3>Master Tailor</h3>
+                <p>Expert in all types of garments with years of experience in traditional and modern tailoring techniques.</p>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">D</div>
+                <h3>Design Specialist</h3>
+                <p>Creative mind behind our latest designs. Specializes in creating unique patterns and styles.</p>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">Q</div>
+                <h3>Quality Inspector</h3>
+                <p>Ensures every garment meets our high standards before reaching the customer.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Want to Know More?</h2>
+            <p>Visit us or give us a call. We'd love to tell you more about our story and services.</p>
+            <div class="cta-buttons">
+                <a href="{{ url_for('contact') }}" class="btn btn-primary">Contact Us</a>
+                <a href="tel:+9779808699164" class="btn btn-secondary">Call: 9808699164</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

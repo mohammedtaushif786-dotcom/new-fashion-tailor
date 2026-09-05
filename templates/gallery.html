@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+
+{% block title %}Gallery - NEW FASHION TAILOR{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+    <div class="container">
+        <h1 class="page-title">Our Gallery</h1>
+        <p class="page-subtitle">Showcasing Our Finest Work</p>
+        <nav class="breadcrumb">
+            <a href="{{ url_for('home') }}">Home</a>
+            <span>/</span>
+            <span>Gallery</span>
+        </nav>
+    </div>
+</section>
+
+<section class="gallery-section">
+    <div class="container">
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">All Work</button>
+            <button class="filter-btn" data-filter="school">School Uniforms</button>
+            <button class="filter-btn" data-filter="wedding">Wedding Collection</button>
+            <button class="filter-btn" data-filter="official">Official Wear</button>
+            <button class="filter-btn" data-filter="custom">Custom Designs</button>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item" data-category="school">
+                <div class="gallery-placeholder">
+                    <span class="gallery-icon">🎒</span>
+                    <span class="gallery-label">School Uniform Set</span>
+                </div>
+                <div class="gallery-overlay">
+                    <h3>School Uniforms</h3>
+                    <p>Premium quality uniforms for all schools</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="school">
+                <div class="gallery-placeholder">
+                    <span class="gallery-icon">👦</span>
+                    <span class="gallery-label">Boys School Dress</span>
+                </div>
+                <div class="gallery-overlay">
+                    <h3>Boys Collection</h3>
+                    <p>Comfortable & durable school wear</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="school">
+                <div class="gallery-placeholder">
+                    <span class="gallery-icon">👧</span>
+                    <span class="gallery-label">Girls School Dress</span>
+                </div>
+                <div class="gallery-overlay">
+                    <h3>Girls Collection</h3>
+                    <p>Elegant & stylish school outfits</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="wedding">
+                <div class="gallery-placeholder">
+                    <span class="gallery-icon">👰</span>
+                    <span class="gallery-label">Bridal Lehenga</span>
+                </div>
+                <div class="gallery-overlay">
+                    <h3>Bridal Collection</h3>
+                    <p>Stunning lehengas for the special day</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="wedding">
+                <div class="gallery-placeholder">
+                    <span class="gallery-icon">🤵</span>
+                    <span class="gallery-label">Groom Sherwani</span>
+                </div>
+                <div class="gallery-overlay">
+                    <h3>Groom Collection</h3>
+                    <p>Regal sherwanis & suits</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="wedding">
+                <div class="gallery-placeholder">
+                    <span class="gallery-icon">👘</span>
+                    <span class="gallery-label">Traditional Dress</span>
+                </div>
+                <div class="gallery-overlay">
+                    <h3>Traditional Wear</h3>
+                    <p>Authentic Nepali wedding attire</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="official">
+                <div class="gallery-placeholder">
+                    <span class="gallery-icon">👔</span>
+                    <span class="gallery-label">Business Suit</span>
+                </div>
+                <div class="gallery-overlay">
+                    <h3>Business Suits</h3>
+                    <p>Professional & sharp look</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="official">
+                <div class="gallery-placeholder">
+                    <span class="gallery-icon">🎽</span>
+                    <span class="gallery-label">Formal Shirt</span>
+                </div>
+                <div class="gallery-overlay">
+                    <h3>Formal Collection</h3>
+                    <p>Crisp & elegant formal wear</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="custom">
+                <div class="gallery-placeholder">
+                    <span class="gallery-icon">👗</span>
+                    <span class="gallery-label">Designer Dress</span>
+                </div>
+                <div class="gallery-overlay">
+                    <h3>Custom Designs</h3>
+                    <p>Your vision, our creation</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="custom">
+                <div class="gallery-placeholder">
+                    <span class="gallery-icon">🎨</span>
+                    <span class="gallery-label">Embroidery Work</span>
+                </div>
+                <div class="gallery-overlay">
+                    <h3>Embroidery</h3>
+                    <p>Exquisite hand-crafted details</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="official">
+                <div class="gallery-placeholder">
+                    <span class="gallery-icon">🧥</span>
+                    <span class="gallery-label">Blazer Collection</span>
+                </div>
+                <div class="gallery-overlay">
+                    <h3>Blazers</h3>
+                    <p>Classy & sophisticated styles</p>
+                </div>
+            </div>
+            <div class="gallery-item" data-category="custom">
+                <div class="gallery-placeholder">
+                    <span class="gallery-icon">🪡</span>
+                    <span class="gallery-label">Custom Stitching</span>
+                </div>
+                <div class="gallery-overlay">
+                    <h3>Precision Stitching</h3>
+                    <p>Every stitch crafted with care</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Love What You See?</h2>
+            <p>Contact us to order custom designs or to get a quote for any of our services.</p>
+            <div class="cta-buttons">
+                <a href="{{ url_for('contact') }}" class="btn btn-primary">Get In Touch</a>
+                <a href="tel:+9779808699164" class="btn btn-secondary">Call Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
