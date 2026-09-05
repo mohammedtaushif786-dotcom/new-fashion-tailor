@@ -318,6 +318,11 @@ def google_verify(filename):
     """Google Search Console verification"""
     return f"google-site-verification: google{filename}.html", 200, {'Content-Type': 'text/html'}
 
+@app.route('/googleb8d5cd75425cfaab.html')
+def google_verify_main():
+    """Google Search Console verification - main"""
+    return "google-site-verification: googleb8d5cd75425cfaab.html", 200, {'Content-Type': 'text/html'}
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('base.html', error_code=404, error_message="Page Not Found"), 404
