@@ -5,8 +5,6 @@ echo ========================================
 echo.
 echo Starting the website server...
 echo.
-echo Please wait while the server starts...
-echo.
 echo Once started, open your browser and go to:
 echo http://127.0.0.1:5000
 echo.

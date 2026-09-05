@@ -3,19 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NEW FASHION TAILOR - Professional tailoring services in Lalitpur, Nepal. School uniforms, wedding dresses, official wear, and custom stitching.">
-    <meta name="keywords" content="tailor, custom tailoring, school uniforms, wedding dresses, official wear, Lalitpur, Nepal, नयाँ फ्यासन टाइलर">
+    <meta name="description" content="NEW FASHION TAILOR - Professional tailoring services in Lalitpur, Nepal. School uniforms, wedding dresses, official wear, and custom stitching. Best tailor in Imadol, Lalitpur.">
+    <meta name="keywords" content="tailor, custom tailoring, school uniforms, wedding dresses, official wear, Lalitpur, Nepal, नयाँ फ्यासन टाइलर, टाइलर ललितपुर, विद्यालय वर्दी, विवाह पोशाक">
     <meta name="author" content="NEW FASHION TAILOR">
+    <meta name="robots" content="index, follow">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <title>{% block title %}NEW FASHION TAILOR{% endblock %}</title>
+    <meta property="og:title" content="NEW FASHION TAILOR - Best Tailoring in Lalitpur, Nepal">
+    <meta property="og:description" content="Professional tailoring services. School uniforms, wedding dresses, official wear, and custom stitching in Imadol, Lalitpur.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://new-fashion-tailor.onrender.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NEW FASHION TAILOR - Best Tailoring in Lalitpur">
+    <meta name="twitter:description" content="Professional tailoring services in Lalitpur, Nepal. School uniforms, wedding dresses, official wear.">
+    <title>{% block title %}NEW FASHION TAILOR - Best Tailoring in Lalitpur, Nepal | School Uniforms, Wedding Dresses{% endblock %}</title>
+    <link rel="canonical" href="https://new-fashion-tailor.onrender.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Mukta:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Tailor",
+        "name": "NEW FASHION TAILOR",
+        "description": "Professional tailoring services in Lalitpur, Nepal. School uniforms, wedding dresses, official wear, and custom stitching.",
+        "url": "https://new-fashion-tailor.onrender.com",
+        "telephone": ["+9779808699164", "+9779866255830"],
+        "email": "tamannakha84@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Imadol, Krishna Mandir",
+            "addressLocality": "Lalitpur",
+            "addressRegion": "Bagmati",
+            "addressCountry": "NP"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 27.6644,
+            "longitude": 85.3188
+        },
+        "openingHours": ["Su-Th 09:00-19:00", "Fr 09:00-17:00", "Sa 10:00-16:00"],
+        "priceRange": "$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "50"
+        }
+    }
+    </script>
+    <style>
+        .loading-screen{position:fixed;inset:0;background:linear-gradient(135deg,#F3E8FF,#FFF1F2);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:99999;transition:opacity 0.5s ease}
+        .loading-screen.hidden{opacity:0;pointer-events:none}
+        .loading-spinner{width:60px;height:60px;border:4px solid #E2E8F0;border-top:4px solid #8B5CF6;border-radius:50%;animation:spin 1s linear infinite;margin-bottom:24px}
+        .loading-text{font-family:'Playfair Display',serif;font-size:1.5rem;color:#0F172A;margin-bottom:8px}
+        .loading-sub{color:#94A3B8;font-size:0.9rem}
+        @keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+    </style>
 </head>
 <body>
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">NEW FASHION TAILOR</div>
+        <div class="loading-sub">Loading your experience...</div>
+    </div>
     <nav class="navbar">
         <div class="nav-container">
             <a href="{{ url_for('home') }}" class="logo">
@@ -157,6 +208,22 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                var ls = document.getElementById('loadingScreen');
+                if (ls) { ls.classList.add('hidden'); setTimeout(function() { ls.remove(); }, 500); }
+            }, 800);
+        });
+        window.addEventListener('error', function(e) {
+            var ls = document.getElementById('loadingScreen');
+            if (ls) { ls.classList.add('hidden'); setTimeout(function() { ls.remove(); }, 500); }
+        });
+        setTimeout(function() {
+            var ls = document.getElementById('loadingScreen');
+            if (ls) { ls.classList.add('hidden'); setTimeout(function() { ls.remove(); }, 500); }
+        }, 5000);
+    </script>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

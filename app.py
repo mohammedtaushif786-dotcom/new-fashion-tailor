@@ -222,6 +222,34 @@ def booking():
 
     return render_template('booking.html')
 
+@app.route('/robots.txt')
+def robots_txt():
+    return """User-agent: *
+Allow: /
+Sitemap: https://new-fashion-tailor.onrender.com/sitemap.xml
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+""", 200, {'Content-Type': 'text/plain'}
+
+@app.route('/sitemap.xml')
+def sitemap_xml():
+    pages = ['/', '/about', '/services', '/blog', '/gallery', '/reviews', '/payment', '/booking', '/contact']
+    urls = ''.join([f'<url><loc>https://new-fashion-tailor.onrender.com{p}</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>' for p in pages])
+    blog_slugs = [p['slug'] for p in BLOG_POSTS]
+    blog_urls = ''.join([f'<url><loc>https://new-fashion-tailor.onrender.com/blog/{s}</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>' for s in blog_slugs])
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{urls}{blog_urls}
+</urlset>""", 200, {'Content-Type': 'application/xml'}
+
+@app.route('/health')
+def health():
+    return jsonify(status="ok", timestamp=datetime.now().isoformat()), 200
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('base.html', error_code=404, error_message="Page Not Found"), 404
