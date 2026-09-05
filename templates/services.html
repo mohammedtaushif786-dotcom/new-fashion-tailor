@@ -5,12 +5,12 @@
 {% block content %}
 <section class="page-hero">
     <div class="container">
-        <h1 class="page-title">Our Services</h1>
-        <p class="page-subtitle">Comprehensive Tailoring Solutions for Every Need</p>
+        <h1 class="page-title" data-en="Our Services" data-ne="हाम्रा सेवाहरू">Our Services</h1>
+        <p class="page-subtitle" data-en="Comprehensive Tailoring Solutions for Every Need" data-ne="हरेक आवश्यकताका लागि व्यापक टाइलरिङ समाधान">Comprehensive Tailoring Solutions for Every Need</p>
         <nav class="breadcrumb">
-            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}" data-en="Home" data-ne="गृह">Home</a>
             <span>/</span>
-            <span>Services</span>
+            <span data-en="Services" data-ne="सेवाहरू">Services</span>
         </nav>
     </div>
 </section>
@@ -18,33 +18,21 @@
 <section class="service-detail" id="school">
     <div class="container">
         <div class="service-detail-grid">
-            <div class="service-detail-content">
-                <div class="service-detail-icon">🎒</div>
-                <h2>School Uniforms & Dresses</h2>
-                <p>We understand the importance of school uniforms in building identity and discipline. Our school uniform service covers:</p>
-                <ul class="service-detail-list">
-                    <li>All school patterns and designs</li>
-                    <li>Durable fabrics for daily wear</li>
-                    <li>Comfortable fitting for active students</li>
-                    <li>Bulk orders with quick turnaround</li>
-                    <li>Reasonable pricing for schools and parents</li>
-                    <li>Embroidery and logo work available</li>
-                </ul>
-                <div class="service-cta">
-                    <a href="tel:+9779808699164" class="btn btn-primary">Order Now</a>
-                </div>
-            </div>
             <div class="service-detail-visual">
-                <div class="service-price-card">
-                    <h3>Starting From</h3>
-                    <div class="price">Rs. 500</div>
-                    <p>per uniform set</p>
-                    <ul>
-                        <li>✓ Free fitting</li>
-                        <li>✓ Quality fabric</li>
-                        <li>✓ Quick delivery</li>
-                    </ul>
-                </div>
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop" alt="School Uniforms" class="service-image" loading="lazy">
+            </div>
+            <div class="service-detail-content">
+                <h2 data-en="School Uniforms & Dresses" data-ne="विद्यालय वर्दी र पोशाक">School Uniforms & Dresses</h2>
+                <p data-en="We understand the importance of school uniforms in building identity and discipline. Our school uniform service covers:" data-ne="हामी पहिचान र अनुशासन निर्माणमा विद्यालय वर्दीको महत्व बुझ्छौं। हाम्रो विद्यालय वर्दी सेवामा समावेश छ:">We understand the importance of school uniforms in building identity and discipline. Our school uniform service covers:</p>
+                <ul class="service-detail-list">
+                    <li data-en="All school patterns and designs" data-ne="सबै विद्यालय ढाँचा र डिजाइन">All school patterns and designs</li>
+                    <li data-en="Durable fabrics for daily wear" data-ne="दैनिक लगनका लागि टिकाउ कपडा">Durable fabrics for daily wear</li>
+                    <li data-en="Comfortable fitting for active students" data-ne="सक्रिय विद्यार्थीहरूका लागि सहज फिटिङ">Comfortable fitting for active students</li>
+                    <li data-en="Bulk orders with quick turnaround" data-ne="छिटो डेलिभरीसहित बल्क अर्डर">Bulk orders with quick turnaround</li>
+                    <li data-en="Reasonable pricing for schools and parents" data-ne="विद्यालय र अभिभावकहरूका लागि उचित मूल्य">Reasonable pricing for schools and parents</li>
+                    <li data-en="Embroidery and logo work available" data-ne="कढाइ र लोगो कार्य उपलब्ध">Embroidery and logo work available</li>
+                </ul>
+                <a href="tel:+9779808699164" class="btn btn-primary" data-en="Order Now" data-ne="अहिले अर्डर गर्नुहोस्">Order Now</a>
             </div>
         </div>
     </div>
@@ -52,34 +40,22 @@
 
 <section class="service-detail alt" id="wedding">
     <div class="container">
-        <div class="service-detail-grid reverse">
-            <div class="service-detail-content">
-                <div class="service-detail-icon">💍</div>
-                <h2>Wedding & Bridal Collection</h2>
-                <p>Your special day deserves special outfits. Our wedding collection includes:</p>
-                <ul class="service-detail-list">
-                    <li>Bridal Lehengas & Sarees</li>
-                    <li>Groom's Sherwanis & Suits</li>
-                    <li>Traditional Nepali Wedding Attire</li>
-                    <li>Custom embroidery and embellishments</li>
-                    <li>Family outfit coordination</li>
-                    <li>Multiple trial fittings included</li>
-                </ul>
-                <div class="service-cta">
-                    <a href="tel:+9779808699164" class="btn btn-primary">Book Consultation</a>
-                </div>
-            </div>
+        <div class="service-detail-grid">
             <div class="service-detail-visual">
-                <div class="service-price-card premium">
-                    <h3>Premium Service</h3>
-                    <div class="price">Custom Quote</div>
-                    <p>Based on design</p>
-                    <ul>
-                        <li>✓ Premium fabrics</li>
-                        <li>✓ Custom designs</li>
-                        <li>✓ Multiple fittings</li>
-                    </ul>
-                </div>
+                <img src="https://images.unsplash.com/photo-1594552072238-5763e1e4fa7d?w=600&h=400&fit=crop" alt="Wedding Collection" class="service-image" loading="lazy">
+            </div>
+            <div class="service-detail-content">
+                <h2 data-en="Wedding & Bridal Collection" data-ne="विवाह र दुलही सङ्ग्रह">Wedding & Bridal Collection</h2>
+                <p data-en="Your special day deserves special outfits. Our wedding collection includes:" data-ne="तपाईंको विशेष दिनलाई विशेष पोशाक चाहिन्छ। हाम्रो विवाह सङ्ग्रहमा समावेश छ:">Your special day deserves special outfits. Our wedding collection includes:</p>
+                <ul class="service-detail-list">
+                    <li data-en="Bridal Lehengas & Sarees" data-ne="दुलही लेहंगा र सारी">Bridal Lehengas & Sarees</li>
+                    <li data-en="Groom Sherwanis & Suits" data-ne="दुलहा शेरवानी र सुट">Groom Sherwanis & Suits</li>
+                    <li data-en="Traditional Nepali Wedding Attire" data-ne="परम्परागत नेपाली विवाह पोशाक">Traditional Nepali Wedding Attire</li>
+                    <li data-en="Custom embroidery and embellishments" data-ne="कस्टम कढाइ र सजावट">Custom embroidery and embellishments</li>
+                    <li data-en="Family outfit coordination" data-ne="परिवार पोशाक समन्वय">Family outfit coordination</li>
+                    <li data-en="Multiple trial fittings included" data-ne="धेरै परीक्षण फिटिङ समावेश">Multiple trial fittings included</li>
+                </ul>
+                <a href="tel:+9779808699164" class="btn btn-primary" data-en="Book Consultation" data-ne="परामर्श बुक गर्नुहोस्">Book Consultation</a>
             </div>
         </div>
     </div>
@@ -88,33 +64,21 @@
 <section class="service-detail" id="official">
     <div class="container">
         <div class="service-detail-grid">
-            <div class="service-detail-content">
-                <div class="service-detail-icon">👔</div>
-                <h2>Official & Professional Wear</h2>
-                <p>Dress for success with our professional attire collection:</p>
-                <ul class="service-detail-list">
-                    <li>Business Suits (2-piece & 3-piece)</li>
-                    <li>Formal Shirts & Trousers</li>
-                    <li>Blazers & Jackets</li>
-                    <li>Office Wear for Men & Women</li>
-                    <li>Interview & Presentation Outfits</li>
-                    <li>Corporate Uniforms</li>
-                </ul>
-                <div class="service-cta">
-                    <a href="tel:+9779808699164" class="btn btn-primary">Get Quote</a>
-                </div>
-            </div>
             <div class="service-detail-visual">
-                <div class="service-price-card">
-                    <h3>Starting From</h3>
-                    <div class="price">Rs. 1,500</div>
-                    <p>per outfit</p>
-                    <ul>
-                        <li>✓ Perfect fit</li>
-                        <li>✓ Quality fabric</li>
-                        <li>✓ Professional look</li>
-                    </ul>
-                </div>
+                <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=600&h=400&fit=crop" alt="Official Wear" class="service-image" loading="lazy">
+            </div>
+            <div class="service-detail-content">
+                <h2 data-en="Official & Professional Wear" data-ne="अधिकारिक र पेशेवर पहिरन">Official & Professional Wear</h2>
+                <p data-en="Dress for success with our professional attire collection:" data-ne="हाम्रो पेशेवर पहिरन सङ्ग्रहसँग सफलताको लागि लुगा लगाउनुहोस्:">Dress for success with our professional attire collection:</p>
+                <ul class="service-detail-list">
+                    <li data-en="Business Suits (2-piece & 3-piece)" data-ne="व्यापार सुट (२-पिस र ३-पिस)">Business Suits (2-piece & 3-piece)</li>
+                    <li data-en="Formal Shirts & Trousers" data-ne="औपचारिक सर्ट र ट्राउजर">Formal Shirts & Trousers</li>
+                    <li data-en="Blazers & Jackets" data-ne="ब्लेजर र ज्याकेट">Blazers & Jackets</li>
+                    <li data-en="Office Wear for Men & Women" data-ne="पुरुष र महिलाका लागि कार्यालय पहिरन">Office Wear for Men & Women</li>
+                    <li data-en="Interview & Presentation Outfits" data-ne="इन्टरभ्यू र प्रस्तुति पोशाक">Interview & Presentation Outfits</li>
+                    <li data-en="Corporate Uniforms" data-ne="कर्पोरेट वर्दी">Corporate Uniforms</li>
+                </ul>
+                <a href="tel:+9779808699164" class="btn btn-primary" data-en="Get Quote" data-ne="मूल्य उद्धरण पाउनुहोस्">Get Quote</a>
             </div>
         </div>
     </div>
@@ -122,34 +86,22 @@
 
 <section class="service-detail alt" id="custom">
     <div class="container">
-        <div class="service-detail-grid reverse">
-            <div class="service-detail-content">
-                <div class="service-detail-icon">✨</div>
-                <h2>Custom & Designer Wear</h2>
-                <p>Bring your dream designs to life with our custom tailoring service:</p>
-                <ul class="service-detail-list">
-                    <li>Custom pattern making</li>
-                    <li>Designer dress creation</li>
-                    <li>Traditional Nepali attire</li>
-                    <li>Modern western outfits</li>
-                    <li>Cultural and festive wear</li>
-                    <li>Complete wardrobe solutions</li>
-                </ul>
-                <div class="service-cta">
-                    <a href="{{ url_for('contact') }}" class="btn btn-primary">Discuss Your Design</a>
-                </div>
-            </div>
+        <div class="service-detail-grid">
             <div class="service-detail-visual">
-                <div class="service-price-card">
-                    <h3>Your Design</h3>
-                    <div class="price">Custom</div>
-                    <p>Tailored for you</p>
-                    <ul>
-                        <li>✓ Your design, our craft</li>
-                        <li>✓ Premium materials</li>
-                        <li>✓ Unlimited revisions</li>
-                    </ul>
-                </div>
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop" alt="Custom Tailoring" class="service-image" loading="lazy">
+            </div>
+            <div class="service-detail-content">
+                <h2 data-en="Custom & Designer Wear" data-ne="कस्टम र डिजाइनर पहिरन">Custom & Designer Wear</h2>
+                <p data-en="Bring your dream designs to life with our custom tailoring service:" data-ne="हाम्रो कस्टम टाइलरिङ सेवासँग तपाईंको सपनाको डिजाइनलाई वास्तविकतामा ल्याउनुहोस्:">Bring your dream designs to life with our custom tailoring service:</p>
+                <ul class="service-detail-list">
+                    <li data-en="Custom pattern making" data-ne="कस्टम ढाँचा निर्माण">Custom pattern making</li>
+                    <li data-en="Designer dress creation" data-ne="डिजाइनर पोशाक सिर्जना">Designer dress creation</li>
+                    <li data-en="Traditional Nepali attire" data-ne="परम्परागत नेपाली पहिरन">Traditional Nepali attire</li>
+                    <li data-en="Modern western outfits" data-ne="आधुनिक पाश्चात्य पोशाक">Modern western outfits</li>
+                    <li data-en="Cultural and festive wear" data-ne="सांस्कृतिक र चाडपर्व पहिरन">Cultural and festive wear</li>
+                    <li data-en="Complete wardrobe solutions" data-ne="सम्पूर्ण वार्डरोब समाधान">Complete wardrobe solutions</li>
+                </ul>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary" data-en="Discuss Your Design" data-ne="तपाईंको डिजाइन छलफल गर्नुहोस्">Discuss Your Design</a>
             </div>
         </div>
     </div>
@@ -158,33 +110,21 @@
 <section class="service-detail" id="alteration">
     <div class="container">
         <div class="service-detail-grid">
-            <div class="service-detail-content">
-                <div class="service-detail-icon">🔄</div>
-                <h2>Alterations & Repairs</h2>
-                <p>Give your old clothes a new life with our expert alteration services:</p>
-                <ul class="service-detail-list">
-                    <li>Size adjustments</li>
-                    <li>Hemming and shortening</li>
-                    <li>Taking in or letting out</li>
-                    <li>Zipper replacement</li>
-                    <li>Button replacement</li>
-                    <li>General repairs and maintenance</li>
-                </ul>
-                <div class="service-cta">
-                    <a href="tel:+9779808699164" class="btn btn-primary">Get It Altered</a>
-                </div>
-            </div>
             <div class="service-detail-visual">
-                <div class="service-price-card">
-                    <h3>Quick Service</h3>
-                    <div class="price">Rs. 100+</div>
-                    <p>depending on work</p>
-                    <ul>
-                        <li>✓ Same day service</li>
-                        <li>✓ Expert tailoring</li>
-                        <li>✓ Affordable rates</li>
-                    </ul>
-                </div>
+                <img src="https://images.unsplash.com/photo-1558171814-68b76e4e5d77?w=600&h=400&fit=crop" alt="Alterations" class="service-image" loading="lazy">
+            </div>
+            <div class="service-detail-content">
+                <h2 data-en="Alterations & Repairs" data-ne="समायोजन र मर्मत">Alterations & Repairs</h2>
+                <p data-en="Give your old clothes a new life with our expert alteration services:" data-ne="हाम्रो विशेषज्ञ समायोजन सेवासँग तपाईंको पुरानो लुगालाई नयाँ जीवन दिनुहोस्:">Give your old clothes a new life with our expert alteration services:</p>
+                <ul class="service-detail-list">
+                    <li data-en="Size adjustments" data-ne="साइज समायोजन">Size adjustments</li>
+                    <li data-en="Hemming and shortening" data-ne="हेमिङ र छोट्याउने">Hemming and shortening</li>
+                    <li data-en="Taking in or letting out" data-ne="साँघुर्ने वा फराकिलो गर्ने">Taking in or letting out</li>
+                    <li data-en="Zipper replacement" data-ne="जिपर प्रतिस्थापन">Zipper replacement</li>
+                    <li data-en="Button replacement" data-ne="बटन प्रतिस्थापन">Button replacement</li>
+                    <li data-en="General repairs and maintenance" data-ne="सामान्य मर्मत र मर्मत">General repairs and maintenance</li>
+                </ul>
+                <a href="tel:+9779808699164" class="btn btn-primary" data-en="Get It Altered" data-ne="समायोजन गराउनुहोस्">Get It Altered</a>
             </div>
         </div>
     </div>
@@ -193,11 +133,11 @@
 <section class="cta-section">
     <div class="container">
         <div class="cta-content">
-            <h2>Need a Custom Service?</h2>
-            <p>Contact us for any tailoring requirement. We're here to help!</p>
+            <h2 data-en="Need a Custom Service?" data-ne="कस्टम सेवा चाहिन्छ?">Need a Custom Service?</h2>
+            <p data-en="Contact us for any tailoring requirement. We're here to help!" data-ne="कुनै पनि टाइलरिङ आवश्यकताका लागि हामीसँग सम्पर्क गर्नुहोस्। हामी मद्दत गर्न तयार छौं!">Contact us for any tailoring requirement. We're here to help!</p>
             <div class="cta-buttons">
-                <a href="tel:+9779808699164" class="btn btn-primary">Call: 9808699164</a>
-                <a href="https://wa.me/9779808699164" class="btn btn-whatsapp">WhatsApp Us</a>
+                <a href="tel:+9779808699164" class="btn btn-primary" data-en="Call: 9808699164" data-ne="कल गर्नुहोस्: 9808699164">Call: 9808699164</a>
+                <a href="https://wa.me/9779808699164" class="btn btn-whatsapp" data-en="WhatsApp Us" data-ne="WhatsApp गर्नुहोस्">WhatsApp Us</a>
             </div>
         </div>
     </div>

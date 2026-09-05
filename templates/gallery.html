@@ -5,12 +5,12 @@
 {% block content %}
 <section class="page-hero">
     <div class="container">
-        <h1 class="page-title">Our Gallery</h1>
-        <p class="page-subtitle">Showcasing Our Finest Work</p>
+        <h1 class="page-title" data-en="Our Gallery" data-ne="हाम्रो ग्यालरी">Our Gallery</h1>
+        <p class="page-subtitle" data-en="Showcasing Our Finest Work" data-ne="हाम्रो उत्कृष्ट कार्य प्रदर्शन">Showcasing Our Finest Work</p>
         <nav class="breadcrumb">
-            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('home') }}" data-en="Home" data-ne="गृह">Home</a>
             <span>/</span>
-            <span>Gallery</span>
+            <span data-en="Gallery" data-ne="ग्यालरी">Gallery</span>
         </nav>
     </div>
 </section>
@@ -18,132 +18,96 @@
 <section class="gallery-section">
     <div class="container">
         <div class="gallery-filter">
-            <button class="filter-btn active" data-filter="all">All Work</button>
-            <button class="filter-btn" data-filter="school">School Uniforms</button>
-            <button class="filter-btn" data-filter="wedding">Wedding Collection</button>
-            <button class="filter-btn" data-filter="official">Official Wear</button>
-            <button class="filter-btn" data-filter="custom">Custom Designs</button>
+            <button class="filter-btn active" data-filter="all" data-en="All Work" data-ne="सबै कार्य">All Work</button>
+            <button class="filter-btn" data-filter="school" data-en="School Uniforms" data-ne="विद्यालय वर्दी">School Uniforms</button>
+            <button class="filter-btn" data-filter="wedding" data-en="Wedding Collection" data-ne="विवाह सङ्ग्रह">Wedding Collection</button>
+            <button class="filter-btn" data-filter="official" data-en="Official Wear" data-ne="अधिकारिक पहिरन">Official Wear</button>
+            <button class="filter-btn" data-filter="custom" data-en="Custom Designs" data-ne="कस्टम डिजाइन">Custom Designs</button>
         </div>
 
         <div class="gallery-grid">
             <div class="gallery-item" data-category="school">
-                <div class="gallery-placeholder">
-                    <span class="gallery-icon">🎒</span>
-                    <span class="gallery-label">School Uniform Set</span>
-                </div>
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=400&fit=crop" alt="School Uniform" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>School Uniforms</h3>
-                    <p>Premium quality uniforms for all schools</p>
+                    <h3 data-en="School Uniforms" data-ne="विद्यालय वर्दी">School Uniforms</h3>
+                    <p data-en="Premium quality uniforms for all schools" data-ne="सबै विद्यालयका लागि प्रिमियम वर्दी">Premium quality uniforms for all schools</p>
                 </div>
             </div>
             <div class="gallery-item" data-category="school">
-                <div class="gallery-placeholder">
-                    <span class="gallery-icon">👦</span>
-                    <span class="gallery-label">Boys School Dress</span>
-                </div>
+                <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&h=400&fit=crop" alt="Boys School Dress" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>Boys Collection</h3>
-                    <p>Comfortable & durable school wear</p>
+                    <h3 data-en="Boys Collection" data-ne="केटाहरूको सङ्ग्रह">Boys Collection</h3>
+                    <p data-en="Comfortable & durable school wear" data-ne="सहज र टिकाउ विद्यालय पहिरन">Comfortable & durable school wear</p>
                 </div>
             </div>
             <div class="gallery-item" data-category="school">
-                <div class="gallery-placeholder">
-                    <span class="gallery-icon">👧</span>
-                    <span class="gallery-label">Girls School Dress</span>
-                </div>
+                <img src="https://images.unsplash.com/photo-1545296664-39db56ad95cd?w=400&h=400&fit=crop" alt="Girls School Dress" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>Girls Collection</h3>
-                    <p>Elegant & stylish school outfits</p>
+                    <h3 data-en="Girls Collection" data-ne="केटीहरूको सङ्ग्रह">Girls Collection</h3>
+                    <p data-en="Elegant & stylish school outfits" data-ne="सुन्दर र स्टाइलिश विद्यालय पोशाक">Elegant & stylish school outfits</p>
                 </div>
             </div>
             <div class="gallery-item" data-category="wedding">
-                <div class="gallery-placeholder">
-                    <span class="gallery-icon">👰</span>
-                    <span class="gallery-label">Bridal Lehenga</span>
-                </div>
+                <img src="https://images.unsplash.com/photo-1594552072238-5763e1e4fa7d?w=400&h=400&fit=crop" alt="Bridal Lehenga" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>Bridal Collection</h3>
-                    <p>Stunning lehengas for the special day</p>
+                    <h3 data-en="Bridal Collection" data-ne="दुलही सङ्ग्रह">Bridal Collection</h3>
+                    <p data-en="Stunning lehengas for the special day" data-ne="विशेष दिनका लागि आकर्षक लेहंगा">Stunning lehengas for the special day</p>
                 </div>
             </div>
             <div class="gallery-item" data-category="wedding">
-                <div class="gallery-placeholder">
-                    <span class="gallery-icon">🤵</span>
-                    <span class="gallery-label">Groom Sherwani</span>
-                </div>
+                <img src="https://images.unsplash.com/photo-1593742378161-44ae1b20bb91?w=400&h=400&fit=crop" alt="Groom Sherwani" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>Groom Collection</h3>
-                    <p>Regal sherwanis & suits</p>
+                    <h3 data-en="Groom Collection" data-ne="दुलहा सङ्ग्रह">Groom Collection</h3>
+                    <p data-en="Regal sherwanis & suits" data-ne="राजसी शेरवानी र सुट">Regal sherwanis & suits</p>
                 </div>
             </div>
             <div class="gallery-item" data-category="wedding">
-                <div class="gallery-placeholder">
-                    <span class="gallery-icon">👘</span>
-                    <span class="gallery-label">Traditional Dress</span>
-                </div>
+                <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400&h=400&fit=crop" alt="Traditional Dress" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>Traditional Wear</h3>
-                    <p>Authentic Nepali wedding attire</p>
+                    <h3 data-en="Traditional Wear" data-ne="परम्परागत पहिरन">Traditional Wear</h3>
+                    <p data-en="Authentic Nepali wedding attire" data-ne="प्रामाणिक नेपाली विवाह पोशाक">Authentic Nepali wedding attire</p>
                 </div>
             </div>
             <div class="gallery-item" data-category="official">
-                <div class="gallery-placeholder">
-                    <span class="gallery-icon">👔</span>
-                    <span class="gallery-label">Business Suit</span>
-                </div>
+                <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=400&fit=crop" alt="Business Suit" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>Business Suits</h3>
-                    <p>Professional & sharp look</p>
+                    <h3 data-en="Business Suits" data-ne="व्यापार सुट">Business Suits</h3>
+                    <p data-en="Professional & sharp look" data-ne="पेशेवर र तीखो लुक">Professional & sharp look</p>
                 </div>
             </div>
             <div class="gallery-item" data-category="official">
-                <div class="gallery-placeholder">
-                    <span class="gallery-icon">🎽</span>
-                    <span class="gallery-label">Formal Shirt</span>
-                </div>
+                <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=400&fit=crop" alt="Formal Shirt" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>Formal Collection</h3>
-                    <p>Crisp & elegant formal wear</p>
+                    <h3 data-en="Formal Collection" data-ne="औपचारिक सङ्ग्रह">Formal Collection</h3>
+                    <p data-en="Crisp & elegant formal wear" data-ne="ताजा र सुन्दर औपचारिक पहिरन">Crisp & elegant formal wear</p>
                 </div>
             </div>
             <div class="gallery-item" data-category="custom">
-                <div class="gallery-placeholder">
-                    <span class="gallery-icon">👗</span>
-                    <span class="gallery-label">Designer Dress</span>
-                </div>
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=400&h=400&fit=crop" alt="Designer Dress" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>Custom Designs</h3>
-                    <p>Your vision, our creation</p>
+                    <h3 data-en="Custom Designs" data-ne="कस्टम डिजाइन">Custom Designs</h3>
+                    <p data-en="Your vision, our creation" data-ne="तपाईंको दृष्टिकोण, हाम्रो सिर्जना">Your vision, our creation</p>
                 </div>
             </div>
             <div class="gallery-item" data-category="custom">
-                <div class="gallery-placeholder">
-                    <span class="gallery-icon">🎨</span>
-                    <span class="gallery-label">Embroidery Work</span>
-                </div>
+                <img src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=400&h=400&fit=crop" alt="Embroidery Work" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>Embroidery</h3>
-                    <p>Exquisite hand-crafted details</p>
+                    <h3 data-en="Embroidery" data-ne="कढाइ">Embroidery</h3>
+                    <p data-en="Exquisite hand-crafted details" data-ne="उत्कृष्ट हस्तनिर्मित विवरण">Exquisite hand-crafted details</p>
                 </div>
             </div>
             <div class="gallery-item" data-category="official">
-                <div class="gallery-placeholder">
-                    <span class="gallery-icon">🧥</span>
-                    <span class="gallery-label">Blazer Collection</span>
-                </div>
+                <img src="https://images.unsplash.com/photo-1507679799987-c73b1c7e2f1e?w=400&h=400&fit=crop" alt="Blazer Collection" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>Blazers</h3>
-                    <p>Classy & sophisticated styles</p>
+                    <h3 data-en="Blazers" data-ne="ब्लेजर">Blazers</h3>
+                    <p data-en="Classy & sophisticated styles" data-ne="शिष्ट र परिष्कृत शैली">Classy & sophisticated styles</p>
                 </div>
             </div>
             <div class="gallery-item" data-category="custom">
-                <div class="gallery-placeholder">
-                    <span class="gallery-icon">🪡</span>
-                    <span class="gallery-label">Custom Stitching</span>
-                </div>
+                <img src="https://images.unsplash.com/photo-1558171814-fa40a7c51768?w=400&h=400&fit=crop" alt="Fabric Selection" loading="lazy">
                 <div class="gallery-overlay">
-                    <h3>Precision Stitching</h3>
-                    <p>Every stitch crafted with care</p>
+                    <h3 data-en="Premium Fabrics" data-ne="प्रिमियम कपडा">Premium Fabrics</h3>
+                    <p data-en="Finest materials for your outfit" data-ne="तपाईंको पोशाकका लागि उत्कृष्ट सामग्री">Finest materials for your outfit</p>
                 </div>
             </div>
         </div>
@@ -153,11 +117,11 @@
 <section class="cta-section">
     <div class="container">
         <div class="cta-content">
-            <h2>Love What You See?</h2>
-            <p>Contact us to order custom designs or to get a quote for any of our services.</p>
+            <h2 data-en="Love What You See?" data-ne="के तपाईंलाई रमाइलो लाग्यो?">Love What You See?</h2>
+            <p data-en="Contact us to order custom designs or to get a quote for any of our services." data-ne="कस्टम डिजाइन अर्डर गर्न वा हाम्रा कुनै पनि सेवाको मूल्य उद्धरण पाउन हामीसँग सम्पर्क गर्नुहोस्।">Contact us to order custom designs or to get a quote for any of our services.</p>
             <div class="cta-buttons">
-                <a href="{{ url_for('contact') }}" class="btn btn-primary">Get In Touch</a>
-                <a href="tel:+9779808699164" class="btn btn-secondary">Call Now</a>
+                <a href="{{ url_for('contact') }}" class="btn btn-primary" data-en="Get In Touch" data-ne="सम्पर्क गर्नुहोस्">Get In Touch</a>
+                <a href="tel:+9779808699164" class="btn btn-secondary" data-en="Call Now" data-ne="अहिले कल गर्नुहोस्">Call Now</a>
             </div>
         </div>
     </div>
